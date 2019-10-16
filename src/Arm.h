@@ -111,7 +111,7 @@ static volatile u32 * const GP_LEV1 = (u32*) GP_LEV1_ADDR;
 #define SYSTIMER_CS_M2_MASK (1 << 2) // System Timer Match 2, IRQ line 2
 #define SYSTIMER_CS_M3_MASK (1 << 3) // System Timer Match 3, IRQ line 3
 
-static volatile u64 *const SYSTIMER_CS        = (u64*) SYSTIMER_CS_ADDR;
+static volatile u32 * const SYSTIMER_CS       = (u32*) SYSTIMER_CS_ADDR;
 static volatile u32 * const SYSTIMER_CLO      = (u32*) SYSTIMER_CLO_ADDR;
 static volatile u32 * const SYSTIMER_CHI      = (u32*) SYSTIMER_CHI_ADDR;
 static volatile const u32 * const SYSTIMER_C0 = (u32*) SYSTIMER_C0_ADDR;
