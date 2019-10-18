@@ -1,0 +1,36 @@
+\hypertarget{group__Arm}{}\doxysection{Functions}
+\label{group__Arm}\index{Functions@{Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Arm_ga5e0e58b5a11a26c6eb46b74716e8801b}{dmb}} (void)
+\begin{DoxyCompactList}\small\item\em Use between different peripheral read / writes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Arm_ga9feb7476507383309c8e3ff2648016f3}{nop}} ()
+\begin{DoxyCompactList}\small\item\em nop \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Arm_ga5e0e58b5a11a26c6eb46b74716e8801b}\label{group__Arm_ga5e0e58b5a11a26c6eb46b74716e8801b}} 
+\index{Functions@{Functions}!dmb@{dmb}}
+\index{dmb@{dmb}!Functions@{Functions}}
+\doxysubsubsection{\texorpdfstring{dmb()}{dmb()}}
+{\footnotesize\ttfamily void dmb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Use between different peripheral read / writes. 
+
+From page 7 of the A\+RM Peripheral datasheet\+: Accesses to the same peripheral will always arrive and return in-\/order. It is only when switching from one peripheral to another that data can arrive out-\/of-\/order. The simplest way to make sure that data is processed in-\/order is to place a memory barrier instruction at critical positions in the code. You should place\+: •A memory write barrier before the first write to a peripheral. •A memory read barrier after the last read of a peripheral. It is not required to put a memory barrier instruction after each read or write access. Only at those places in the code where it is possible that a peripheral read or write may be followed by a read or write of a different peripheral. This is normally at the entry and exit points of the peripheral service code. \mbox{\Hypertarget{group__Arm_ga9feb7476507383309c8e3ff2648016f3}\label{group__Arm_ga9feb7476507383309c8e3ff2648016f3}} 
+\index{Functions@{Functions}!nop@{nop}}
+\index{nop@{nop}!Functions@{Functions}}
+\doxysubsubsection{\texorpdfstring{nop()}{nop()}}
+{\footnotesize\ttfamily void nop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+nop 
+
+Will just {\ttfamily bx} {\ttfamily to} the link register ({\ttfamily lr} {\ttfamily }) 

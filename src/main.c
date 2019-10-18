@@ -1,5 +1,13 @@
 #include "Arm.h"
 
+
+
+void
+TimerIRQHandler(void)
+{
+
+}
+
 int 
 main(void)
 {
@@ -9,10 +17,15 @@ main(void)
 
     dmb();
 
+    uint w = *FSEL4;
+
     // Set only the led pin to an output
-    *GP_FSEL4 &= ~(7 << 21);
-    *GP_FSEL4 |= (1 << 21);
-    *GP_CLR1 = GP_CLR1_LED_MASK;
+    w &= ~(7 << 21);
+    w |= (1 << 21);
+
+    *FSEL4 = w;
+
+    *CLR1 = _CLR1_LED_MASK;
 
     dmb();
 
@@ -32,13 +45,13 @@ main(void)
             if (even)
             {
                 dmb();
-                *GP_CLR1 = GP_CLR1_LED_MASK;
+                *CLR1 = _CLR1_LED_MASK;
                 dmb();
             }
             else
             {
                 dmb();
-                *GP_SET1 = GP_SET1_LED_MASK;
+                *SET1 = _SET1_LED_MASK;
                 dmb();
             }
 

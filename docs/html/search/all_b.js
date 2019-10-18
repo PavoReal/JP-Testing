@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['s16_61',['s16',['../group__Common.html#gaa980e2c02ba2305e0f489d5650655425',1,'Arm.h']]],
+  ['s32_62',['s32',['../group__Common.html#gae9b1af5c037e57a98884758875d3a7c4',1,'Arm.h']]],
+  ['s64_63',['s64',['../group__Common.html#ga350c6fc928e3bdc6c6486268ac8fb269',1,'Arm.h']]],
+  ['s8_64',['s8',['../group__Common.html#ga9e382f207c65ca13ab4ae98363aeda80',1,'Arm.h']]],
+  ['set0_5faddr_65',['SET0_ADDR',['../group__GPIO.html#gaa950488cb7cbe2554b748dbfe3e61876',1,'Arm.h']]],
+  ['set1_5faddr_66',['SET1_ADDR',['../group__GPIO.html#ga6a37befed779e9b9308480f8248f4fed',1,'Arm.h']]],
+  ['spi_67',['SPI',['../group__SPI.html',1,'']]],
+  ['systimer_68',['SYSTIMER',['../group__SYSTIMER.html',1,'']]],
+  ['systimer_5fc0_5faddr_69',['SYSTIMER_C0_ADDR',['../group__SYSTIMER.html#ga47fa566f203db74cf2cef46da4cc2cf2',1,'Arm.h']]],
+  ['systimer_5fc1_5faddr_70',['SYSTIMER_C1_ADDR',['../group__SYSTIMER.html#gacd54e6d83dd922375b7400f59d1581f6',1,'Arm.h']]],
+  ['systimer_5fc2_5faddr_71',['SYSTIMER_C2_ADDR',['../group__SYSTIMER.html#ga8d9e4fe8ecd86538791452ac1e7edd5b',1,'Arm.h']]],
+  ['systimer_5fc3_5faddr_72',['SYSTIMER_C3_ADDR',['../group__SYSTIMER.html#ga54fb323df9fbd28f70a37115688fb446',1,'Arm.h']]],
+  ['systimer_5fchi_5faddr_73',['SYSTIMER_CHI_ADDR',['../group__SYSTIMER.html#ga19c4451a4590b53adb2369ef8a92b026',1,'Arm.h']]],
+  ['systimer_5fclo_5faddr_74',['SYSTIMER_CLO_ADDR',['../group__SYSTIMER.html#gab2062059c3d04229aa948a7bbbfbd18c',1,'Arm.h']]],
+  ['systimer_5fcs_5faddr_75',['SYSTIMER_CS_ADDR',['../group__SYSTIMER.html#ga70b5db2a1bac4db4cc0b1a7d32318931',1,'Arm.h']]],
+  ['systimer_5fcs_5fm0_5fmask_76',['SYSTIMER_CS_M0_MASK',['../group__SYSTIMER.html#gab9771d55af9d871738ad146a91960714',1,'Arm.h']]],
+  ['systimer_5fcs_5fm1_5fmask_77',['SYSTIMER_CS_M1_MASK',['../group__SYSTIMER.html#gab109bde4c677a0039671e9d75100188b',1,'Arm.h']]],
+  ['systimer_5fcs_5fm2_5fmask_78',['SYSTIMER_CS_M2_MASK',['../group__SYSTIMER.html#ga2d59b9d5a0ad373d301f97dbac765adf',1,'Arm.h']]],
+  ['systimer_5fcs_5fm3_5fmask_79',['SYSTIMER_CS_M3_MASK',['../group__SYSTIMER.html#gaa925270b7e407cdf21f76e3bc5aee07f',1,'Arm.h']]],
+  ['systimer_5ffreq_80',['SYSTIMER_FREQ',['../group__SYSTIMER.html#gafeebbd2589412bdf2a7adc37273c8701',1,'Arm.h']]]
+];
