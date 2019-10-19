@@ -7,7 +7,7 @@ OBJDUMP=arm-none-eabi-objdump
 OBJCOPY=arm-none-eabi-objcopy
 
 ASM_FLAGS="--warn --fatal-warnings"
-CC_FLAGS="-Wall -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c"
+CC_FLAGS="-Wall -Wextra -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c"
 
 mkdir -p build/
 

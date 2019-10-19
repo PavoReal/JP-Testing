@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_91',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]]
+  ['dmb',['dmb',['../group__Peripherals.html#ga5e0e58b5a11a26c6eb46b74716e8801b',1,'BCM2835.h']]]
 ];

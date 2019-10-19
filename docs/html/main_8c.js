@@ -1,5 +1,6 @@
 var main_8c =
 [
-    [ "main", "main_8c.html#a840291bc02cba5474a4cb46a9b9566fe", null ],
-    [ "TimerIRQHandler", "main_8c.html#aa0bfb060aa92b65f5e1f1b8cf72c4178", null ]
+    [ "UNUSED", "main_8c.html#aa2c1c2787f4fc780b0a902fc66d5c3ce", null ],
+    [ "exit", "main_8c.html#a0dd6a496a668e9cec6bdb47f1a74c071", null ],
+    [ "main", "main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667", null ]
 ];

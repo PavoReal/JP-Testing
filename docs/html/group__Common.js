@@ -9,6 +9,5 @@ var group__Common =
     [ "u64", "group__Common.html#ga3f7e2bcbb0b4c338f3c4f6c937cd4234", null ],
     [ "u8", "group__Common.html#ga92c50087ca0e64fa93fc59402c55f8ca", null ],
     [ "uint", "group__Common.html#ga91ad9478d81a7aaf2593e8d9c3d06a14", null ],
-    [ "dmb", "group__Common.html#ga5e0e58b5a11a26c6eb46b74716e8801b", null ],
     [ "nop", "group__Common.html#ga9feb7476507383309c8e3ff2648016f3", null ]
 ];

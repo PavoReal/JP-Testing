@@ -1,25 +1,23 @@
-/**
- * \file Arm.h
- * \brief Register and system definitions for the BCM2835
- * 
- * *Example Projects*:
- *
- * [xinu](https://embedded-xinu.readthedocs.io/en/latest/index.html)
- *
- * Based on the following docs:
- *
- * [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf)
- *
- * [http://elinux.org/RPi_Low-level_peripherals](http://elinux.org/RPi_Low-level_peripherals) 
- *
- * [http://www.scribd.com/doc/101830961/GPIO-Pads-Control2](http://www.scribd.com/doc/101830961/GPIO-Pads-Control2)
- *
- */
+///
+/// \file BCM2835.h
+/// \brief Register and system definitions for the BCM2835
+/// 
+/// *Example Projects*:
+///
+/// [xinu](https://embedded-xinu.readthedocs.io/en/latest/index.html)
+///
+/// Based on the following docs:
+///
+/// [https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf)
+///
+/// [http://elinux.org/RPi_Low-level_peripherals](http://elinux.org/RPi_Low-level_peripherals) 
+///
+/// [http://www.scribd.com/doc/101830961/GPIO-Pads-Control2](http://www.scribd.com/doc/101830961/GPIO-Pads-Control2)
+///
 #if !defined(JP_ARM_H)
 #define JP_ARM_H
 
-
-// We don't want the compiler  bitching about every unused variable here
+// We don't want the compiler bitching about every unused variable here
 #pragma GCC diagnostic ignored "-Wunused-variable"
 
 #include <stdint.h>
@@ -61,30 +59,32 @@ typedef unsigned int uint;
 ///\addtogroup Common
 ///@{
 
-/** \brief Use between different peripheral read / writes
- *  
- * From page 7 of the ARM Peripheral datasheet:
- * Accesses  to  the  same  peripheral  will  always  arrive  and  return  in-order.    It  is  only  when switching from
- * one peripheral to another that data can arrive out-of-order. The simplest way to make sure that data is processed
- * in-order is to place a memory barrier instruction at critical positions in the code. You should place: •A memory 
- * write barrier before the first write to a peripheral. •A memory read barrier after the last read of a peripheral. It 
- * is not required to put a memory barrier instruction after each read or write access. Only at those places  in the 
- * code where  it  is possible that a peripheral read or write  may  be  followed by a read or write of a different 
- * peripheral. This is normally at the entry and exit points of the peripheral service code. 
- */
-extern void
-dmb(void);
-
-/** \brief nop
- *
- * Will just \c bx \c to the link register (\c lr \c)
- */
+///
+/// \brief nop
+///
+/// Will just \c bx \c to the link register (\c lr \c)
+///
 extern void 
 nop();
 
 /// @}
 /// \addtogroup Peripherals
 /// @{
+
+///
+/// \brief Use between different peripheral read / writes
+///  
+/// From page 7 of the ARM Peripheral datasheet:
+/// Accesses  to  the  same  peripheral  will  always  arrive  and  return  in-order.    It  is  only  when switching from
+/// one peripheral to another that data can arrive out-of-order. The simplest way to make sure that data is processed
+/// in-order is to place a memory barrier instruction at critical positions in the code. You should place: •A memory 
+/// write barrier before the first write to a peripheral. •A memory read barrier after the last read of a peripheral. It 
+/// is not required to put a memory barrier instruction after each read or write access. Only at those places  in the 
+/// code where  it  is possible that a peripheral read or write  may  be  followed by a read or write of a different 
+/// peripheral. This is normally at the entry and exit points of the peripheral service code. 
+///
+extern void
+dmb(void);
 
 /// The start of physical peripheral memory
 #define PERIPHERAL_BASE_ADDR (0x20000000)
@@ -173,77 +173,80 @@ nop();
 /// @}
 /// @}
 
-/**
- * \addtogroup GPIO 
- * The function select registers are used to define the operation of the general-purpose I/O pins. Each of the 54 GPIO 
- * pins has at least two alternative functions as defined in section 16.2. The FSEL{n} field determines the
- * functionality of the nth GPIO pin. All unused alternative function lines are tied to ground and will output a “0” if
- * selected. All pins reset to normal GPIO input operation.
- * @{
- */
+///
+/// \addtogroup GPIO 
+/// The function select registers are used to define the operation of the general-purpose I/O pins. Each of the 54 GPIO 
+/// pins has at least two alternative functions as defined in section 16.2. The FSEL{n} field determines the
+/// functionality of the nth GPIO pin. All unused alternative function lines are tied to ground and will output a “0” if
+/// selected. All pins reset to normal GPIO input operation.
+/// @{
+///
 
 /// GPIO Function Select 0, 32 bits, R/W
-#define FSEL0_ADDR (0x20200000) 
+#define GPFSEL0_ADDR (0x20200000) 
 
 /// GPIO Function Select 1, 32 bits, R/W
-#define FSEL1_ADDR (0x20200004) 
+#define GPFSEL1_ADDR (0x20200004) 
 
 /// GPIO Function Select 2, 32 bits, R/W
-#define FSEL2_ADDR (0x20200008) 
+#define GPFSEL2_ADDR (0x20200008) 
 
 /// GPIO Function Select 3, 32 bits, R/W
-#define FSEL3_ADDR (0x2020000C) 
+#define GPFSEL3_ADDR (0x2020000C) 
 
 /// GPIO Function Select 4, 32 bits, R/W
-#define FSEL4_ADDR (0x20200010) 
+#define GPFSEL4_ADDR (0x20200010) 
 
 /// GPIO Function Select 5, 32 bits, R/W
-#define FSEL5_ADDR (0x20200014) 
-
-static volatile u32 * const FSEL0 = (u32*) FSEL0_ADDR;
-static volatile u32 * const FSEL1 = (u32*) FSEL1_ADDR;
-static volatile u32 * const FSEL2 = (u32*) FSEL2_ADDR;
-static volatile u32 * const FSEL3 = (u32*) FSEL3_ADDR;
-static volatile u32 * const FSEL4 = (u32*) FSEL4_ADDR;
-static volatile u32 * const FSEL5 = (u32*) FSEL5_ADDR;
+#define GPFSEL5_ADDR (0x20200014) 
 
 /// GPIO Pin Output Set 0, 32 bits, W only
-#define SET0_ADDR  (0x2020001C) 
+#define GPSET0_ADDR  (0x2020001C)
 
 /// GPIO Pin Output Set 1, 32 bits, W only
-#define SET1_ADDR  (0x20200020) 
-
-static volatile u32 * const SET0 = (u32*) SET0_ADDR;
-static volatile u32 * const SET1 = (u32*) SET1_ADDR;
+#define GPSET1_ADDR  (0x20200020)
 
 /// GPIO Pin Output Clear 0, 32 bits, W only
-#define CLR0_ADDR  (0x20200028) 
+#define GPCLR0_ADDR  (0x20200028) 
 
 /// GPIO Pin Output Clear 1, 32 bits, W only
-#define CLR1_ADDR  (0x2020002C) 
-
-static volatile u32 * const CLR0 = (u32*) CLR0_ADDR;
-static volatile u32 * const CLR1 = (u32*) CLR1_ADDR;
+#define GPCLR1_ADDR  (0x2020002C) 
 
 /// GPIO Pin Level 0, 32 bits, R only
-#define LEV0_ADDR  (0x20200034) 
+#define GPLEV0_ADDR  (0x20200034) 
 
 /// GPIO Pin Level 1, 32 bits, R only
-#define LEV1_ADDR  (0x20200038) 
+#define GPLEV1_ADDR  (0x20200038) 
 
-static volatile u32 * const LEV0 = (u32*) LEV0_ADDR;
-static volatile u32 * const LEV1 = (u32*) LEV1_ADDR;
+#define GPIO_PIN_INPUT (0)
+#define GPIO_PIN_OUTPUT (1)
+
+#define _GPFSEL4_P47_POSITION (21)
+#define _GPFSEL4_P47_MASK (7 << _GPFSEL4_P47_POSITION)
 
 /// GPIO Pin 47 Mask For \c SET1 \c
-#define _SET1_P47_MASK (1 << (47 - 32))
+#define _GPSET1_P47_MASK (1 << (47 - 32))
 
 /// GPIO LED Mask For \c SET1 \c. (Tied to Pin 47)
-#define _SET1_LED_MASK (_SET1_P47_MASK)
+#define _GPSET1_LED_MASK (_GPSET1_P47_MASK)
 
 /// GPIO Pin 47 Mask For \c CLR1 \c
-#define _CLR1_P47_MASK (1 << (47 - 32))
+#define _GPCLR1_P47_MASK (1 << (47 - 32))
 /// GPIO LED Mask For \c CLR1 \c. (Tied to Pin 47)
-#define _CLR1_LED_MASK (_CLR1_P47_MASK) 
+#define _GPCLR1_LED_MASK (_GPCLR1_P47_MASK) 
+
+static volatile u32 * const GPFSEL0 = (u32*) GPFSEL0_ADDR;
+static volatile u32 * const GPFSEL1 = (u32*) GPFSEL1_ADDR;
+static volatile u32 * const GPFSEL2 = (u32*) GPFSEL2_ADDR;
+static volatile u32 * const GPFSEL3 = (u32*) GPFSEL3_ADDR;
+static volatile u32 * const GPFSEL4 = (u32*) GPFSEL4_ADDR;
+static volatile u32 * const GPFSEL5 = (u32*) GPFSEL5_ADDR;
+static volatile u32 * const GPSET0 = (u32*) GPSET0_ADDR;
+static volatile u32 * const GPSET1 = (u32*) GPSET1_ADDR;
+static volatile u32 * const GPCLR0 = (u32*) GPCLR0_ADDR;
+static volatile u32 * const GPCLR1 = (u32*) GPCLR1_ADDR;
+static volatile u32 * const GPLEV0 = (u32*) GPLEV0_ADDR;
+static volatile u32 * const GPLEV1 = (u32*) GPLEV1_ADDR;
 
 /// @}
 
@@ -307,12 +310,66 @@ static volatile u32 * const SYSTIMER_C3       = (u32*) SYSTIMER_C3_ADDR;
 /// @}
 
 ///
+/// \addtogroup ARM
+///
+
+/// \brief Timer Load Register
+/// The timer load register sets the timer for the timer to count down. This value is loaded into the timer value
+/// register after the load register has been written or if the timer-value register has counted down to 0.
+#define ARM_TIMER_LOAD_ADDR (0x2000B400)
+
+/// \brief Timer Value Register (Read only)
+/// This register holds the current timer value and is counted down when the counter is running. It is counted down each
+/// timer clock until the value 0 is reached. Then the value register is re-loaded from the timer load register and the
+/// interrupt pending bit is set. The timer count down speed is set by the timer pre-divide register.
+#define ARM_TIMER_VALUE_ADDR (0x2000B404)
+
+/// \brief Timer Control Register
+/// See peripheral guide page 197 
+// TODO(Peacock): Finish this
+#define ARM_TIMER_CONTROL_ADDR (0x2000B408)
+
+/// \brief Write only
+#define ARM_TIMER_IRQ_CLEAR_ACK_ADDR (0x2000B40C)
+
+/// \brief Read only
+#define ARM_TIMER_RAW_IRQ_ADDR (0x2000B410)
+
+/// \brief Read only
+#define ARM_TIMER_MASKED_IRQ_ADDR (0x2000B414)
+
+/// \brief TODO
+#define ARM_TIMER_RELOAD_ADDR (0x2000B418)
+
+/// \brief TODO
+#define ARM_TIMER_PRE_DIVIDE_ADDR (0x2000B41C)
+
+/// \brief TODO
+#define ARM_TIMER_FREE_RUNNING_COUNTER_ADDR (0x2000B420)
+
+static volatile u32 * const ARM_TIMER_LOAD          	   = (u32*) ARM_TIMER_LOAD_ADDR;
+static volatile const u32 * const ARM_TIMER_VALUE   	   = (u32*) ARM_TIMER_VALUE_ADDR;
+static volatile u32 * const ARM_TIMER_CONTROL       	   = (u32*) ARM_TIMER_CONTROL_ADDR;
+static volatile u32 * const ARM_TIMER_IRQ_CLEAR_ACK 	   = (u32*) ARM_TIMER_IRQ_CLEAR_ACK_ADDR;
+static volatile u32 * const ARM_TIMER_RAW_IRQ 	    	   = (u32*) ARM_TIMER_RAW_IRQ_ADDR;
+static volatile u32 * const ARM_TIMER_MASKED_IRQ 		   = (u32*) ARM_TIMER_MASKED_IRQ_ADDR;
+static volatile u32 * const ARM_TIMER_RELOAD 	    	   = (u32*) ARM_TIMER_RELOAD_ADDR;
+static volatile u32 * const ARM_TIMER_PRE_DIVIDE 		   = (u32*) ARM_TIMER_PRE_DIVIDE_ADDR;
+static volatile u32 * const ARM_TIMER_FREE_RUNNING_COUNTER = (u32*) ARM_TIMER_FREE_RUNNING_COUNTER_ADDR;
+
+
+///
 /// \addtogroup IRQ
 ///
 
-#define IRQ_BASIC_PENDING_ADDR (0x2000B200) // Pending ARM specific IRQs status, with additional info
-#define IRQ_PENDING_1_ADDR     (0x2000B204) // Pending shared IRQs status 1
-#define IRQ_PENDING_2_ADDR     (0x2000B208) // Pending shared IRQs status 2
+/// Pending ARM specific IRQs status, with additional info
+#define IRQ_BASIC_PENDING_ADDR (0x2000B200)
+
+/// Pending shared IRQs status 1
+#define IRQ_PENDING_1_ADDR     (0x2000B204) 
+
+/// Pending shared IRQs status 2
+#define IRQ_PENDING_2_ADDR     (0x2000B208) 
 #define IRQ_FIQ_CONTROL_ADDR   (0x2000B20C)
 #define IRQ_ENABLE_IRQ_1_ADDR  (0x2000B210)
 #define IRQ_ENABLE_IRQ_2_ADDR  (0x2000B214)

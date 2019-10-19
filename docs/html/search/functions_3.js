@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timerirqhandler_93',['TimerIRQHandler',['../main_8c.html#aa0bfb060aa92b65f5e1f1b8cf72c4178',1,'main.c']]]
+  ['main',['main',['../main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667',1,'main.c']]]
 ];

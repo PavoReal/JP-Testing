@@ -1,0 +1,212 @@
+\hypertarget{BCM2835_8h}{}\section{src/\+B\+C\+M2835.h File Reference}
+\label{BCM2835_8h}\index{src/\+B\+C\+M2835.\+h@{src/\+B\+C\+M2835.\+h}}
+
+
+Register and system definitions for the B\+C\+M2835.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Peripherals_gac7a1d4c43a8ef81fe4f18a6c49541657}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}~(0x20000000)
+\begin{DoxyCompactList}\small\item\em The start of physical peripheral memory. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga49adb525268a836f74bd190622fa100c}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}~(0x20\+F\+F\+F\+F\+F\+F)
+\begin{DoxyCompactList}\small\item\em The end of physical physical memory. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Auxilliary_ga639b2045d2c60d72ba8e023bcdcf32a1}{A\+U\+X\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x20215000)
+\begin{DoxyCompactList}\small\item\em Auxiliary Interrupt Status, 3 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Auxilliary_gab0a21230d9d57f4131ce59a3c610593f}{A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR}~(0x20215004)
+\begin{DoxyCompactList}\small\item\em Auxiliary Enables, 3 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_gad430fbd4dcccfc37e6a75aac3ed1b407}{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+O\+\_\+\+R\+E\+G\+\_\+\+A\+D\+DR}~(0x20215040)
+\item 
+\#define \hyperlink{group__UART_gab7f0b281001eba1983b44e5bd3de3624}{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+E\+R\+\_\+\+A\+D\+DR}~(0x20215044)
+\begin{DoxyCompactList}\small\item\em Mini Uart Interrupt Enable, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga671559e30e80a6d003fcb46ac99d7723}{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+I\+R\+\_\+\+A\+D\+DR}~(0x20215048)
+\begin{DoxyCompactList}\small\item\em Mini Uart Interrupt Identify, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_gaaed9b3cea1302e02eb4ac7cf34e4e166}{A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+C\+R\+\_\+\+A\+D\+DR}~(0x2021504\+C)
+\begin{DoxyCompactList}\small\item\em Mini Uart Line Control, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga76017c2dd6557c4d387828112f1335fe}{A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+C\+R\+\_\+\+A\+D\+DR}~(0x20215050)
+\begin{DoxyCompactList}\small\item\em Mini Uart Modem Control, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga118983fa3b92ba87e7d341722fa0bc31}{A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+S\+R\+\_\+\+A\+D\+DR}~(0x20215054)
+\begin{DoxyCompactList}\small\item\em Mini Uart Line Status, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_gad7e37af940a9ff96e6aba9d307b926be}{A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+S\+R\+\_\+\+A\+D\+DR}~(0x20215058)
+\begin{DoxyCompactList}\small\item\em Mini Uart Modem Status, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga34eb1e827236c566957962b30be74496}{A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+A\+D\+DR}~(0x2021505\+C)
+\begin{DoxyCompactList}\small\item\em Mini Uart Scratch, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga9c3d11375873d03e2bb8b93d3ae970fb}{A\+U\+X\+\_\+\+M\+U\+\_\+\+C\+N\+T\+L\+\_\+\+A\+D\+DR}~(0x20215060)
+\begin{DoxyCompactList}\small\item\em Mini Uart Extra Control, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga3ab600905dcef74e8756dcc8d54c6ef9}{A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}~(0x20215064)
+\begin{DoxyCompactList}\small\item\em Mini Uart Extra Status, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__UART_ga8430fd87ed60df61a2cf173f54c15549}{A\+U\+X\+\_\+\+M\+U\+\_\+\+B\+A\+U\+D\+\_\+\+A\+D\+DR}~(0x20215068)
+\begin{DoxyCompactList}\small\item\em Mini Uart Baudrate, 16 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_gac015fcc23c0188e07727022cb742da3b}{A\+U\+X\+\_\+\+S\+P\+I0\+\_\+\+C\+N\+T\+L0\+\_\+\+A\+D\+DR}~(0x20215080)
+\begin{DoxyCompactList}\small\item\em S\+PI 1 Control register 0, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_gaa4cdf59ae699e8e598ac84dc6f98e65e}{A\+U\+X\+\_\+\+S\+P\+I0\+\_\+\+C\+N\+T\+L1\+\_\+\+A\+D\+DR}~(0x20215084)
+\begin{DoxyCompactList}\small\item\em S\+PI 1 Control register 1, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga7630890159506d96bfeb196837c2efba}{A\+U\+X\+\_\+\+S\+P\+I0\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}~(0x20215088)
+\begin{DoxyCompactList}\small\item\em S\+P\+I1 Status, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga9ffd1ea2cfa82c89ef664ce216453987}{A\+U\+X\+\_\+\+S\+P\+I0\+\_\+\+I\+O\+\_\+\+A\+D\+DR}~(0x20215090)
+\begin{DoxyCompactList}\small\item\em S\+P\+I1 Data, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_gaaee919a849467dd94432c2852c391374}{A\+U\+X\+\_\+\+S\+P\+I0\+\_\+\+P\+E\+E\+K\+\_\+\+A\+D\+DR}~(0x20215094)
+\begin{DoxyCompactList}\small\item\em S\+P\+I1 Peek, 16 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga653371033335ebe3d90109699e4e1c82}{A\+U\+X\+\_\+\+S\+P\+I1\+\_\+\+C\+N\+T\+L0\+\_\+\+A\+D\+DR}~(0x202150\+C0)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Control register 0, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga2a714d2ba5e76210a13d3078f87fdfd5}{A\+U\+X\+\_\+\+S\+P\+I1\+\_\+\+C\+N\+T\+L1\+\_\+\+A\+D\+DR}~(0x202150\+C4)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Control register 1, 8 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga35cdf7d5e580feb11441cebbf94d2c1f}{A\+U\+X\+\_\+\+S\+P\+I1\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}~(0x202150\+C8)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Status, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga1cb3a1149e04695c91eba8c907254d62}{A\+U\+X\+\_\+\+S\+P\+I1\+\_\+\+I\+O\+\_\+\+A\+D\+DR}~(0x202150\+D0)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Data, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SPI_ga4f35d0db4cc890579d44879d06967f6c}{A\+U\+X\+\_\+\+S\+P\+I1\+\_\+\+P\+E\+E\+K\+\_\+\+A\+D\+DR}~(0x202150\+D4)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Peek, 16 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga0c3df699cdf9e7fae6f2555192c53b94}{G\+P\+F\+S\+E\+L0\+\_\+\+A\+D\+DR}~(0x20200000)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 0, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga1e43ad10c82761bf4a40d368efc4dbe4}{G\+P\+F\+S\+E\+L1\+\_\+\+A\+D\+DR}~(0x20200004)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 1, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gaae4e338408363b99970dbb5ca4f525f2}{G\+P\+F\+S\+E\+L2\+\_\+\+A\+D\+DR}~(0x20200008)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 2, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga41a15defd3f0e50bc1d3f25138795670}{G\+P\+F\+S\+E\+L3\+\_\+\+A\+D\+DR}~(0x2020000\+C)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 3, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gaa56d5af814f15c4732f421b4930ecf11}{G\+P\+F\+S\+E\+L4\+\_\+\+A\+D\+DR}~(0x20200010)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 4, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga3ac1e9f2459cc9bee9e9beea554c7717}{G\+P\+F\+S\+E\+L5\+\_\+\+A\+D\+DR}~(0x20200014)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Function Select 5, 32 bits, R/W. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga226a4472dd8e6b8cbb47961287241ea1}{G\+P\+S\+E\+T0\+\_\+\+A\+D\+DR}~(0x2020001\+C)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Output Set 0, 32 bits, W only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gaaece09379857ff0604275597943a0cd4}{G\+P\+S\+E\+T1\+\_\+\+A\+D\+DR}~(0x20200020)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Output Set 1, 32 bits, W only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gafbed74153e98c875a8495d6c132c56a6}{G\+P\+C\+L\+R0\+\_\+\+A\+D\+DR}~(0x20200028)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Output Clear 0, 32 bits, W only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gae9f82a095f346ffd7ee0a7b6dfeac2c0}{G\+P\+C\+L\+R1\+\_\+\+A\+D\+DR}~(0x2020002\+C)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Output Clear 1, 32 bits, W only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga9a2f15ab8980c4a763dd9870950425a2}{G\+P\+L\+E\+V0\+\_\+\+A\+D\+DR}~(0x20200034)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Level 0, 32 bits, R only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gafd408bfb4a12c49e73389a9004c532a0}{G\+P\+L\+E\+V1\+\_\+\+A\+D\+DR}~(0x20200038)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin Level 1, 32 bits, R only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gaaba3c3d6a54814218165f0994425a963}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+P\+UT}~(0)
+\item 
+\#define \hyperlink{group__GPIO_gaa91560b23a4da3a195982d9c4654580a}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+P\+UT}~(1)
+\item 
+\#define \hyperlink{group__GPIO_ga632b6a16f6d3262bfaa31eb0c6b32148}{\+\_\+\+G\+P\+F\+S\+E\+L4\+\_\+\+P47\+\_\+\+P\+O\+S\+I\+T\+I\+ON}~(21)
+\item 
+\#define \hyperlink{group__GPIO_ga467fb29f325faaae76ff76c5a626eda1}{\+\_\+\+G\+P\+F\+S\+E\+L4\+\_\+\+P47\+\_\+\+M\+A\+SK}~(7 $<$$<$ \hyperlink{group__GPIO_ga632b6a16f6d3262bfaa31eb0c6b32148}{\+\_\+\+G\+P\+F\+S\+E\+L4\+\_\+\+P47\+\_\+\+P\+O\+S\+I\+T\+I\+ON})
+\item 
+\#define \hyperlink{group__GPIO_ga4cf59dbaa88390cfa9c359b86bd4f6cd}{\+\_\+\+G\+P\+S\+E\+T1\+\_\+\+P47\+\_\+\+M\+A\+SK}~(1 $<$$<$ (47 -\/ 32))
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin 47 Mask For {\ttfamily S\+E\+T1} {\ttfamily }. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga2f3bb20af38da2c67892bf8856c6991e}{\+\_\+\+G\+P\+S\+E\+T1\+\_\+\+L\+E\+D\+\_\+\+M\+A\+SK}~(\hyperlink{group__GPIO_ga4cf59dbaa88390cfa9c359b86bd4f6cd}{\+\_\+\+G\+P\+S\+E\+T1\+\_\+\+P47\+\_\+\+M\+A\+SK})
+\begin{DoxyCompactList}\small\item\em G\+P\+IO L\+ED Mask For {\ttfamily S\+E\+T1} {\ttfamily }. (Tied to Pin 47) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_gad929eafe7e55e1d2835b8a2f081cf34c}{\+\_\+\+G\+P\+C\+L\+R1\+\_\+\+P47\+\_\+\+M\+A\+SK}~(1 $<$$<$ (47 -\/ 32))
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Pin 47 Mask For {\ttfamily C\+L\+R1} {\ttfamily }. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__GPIO_ga7fc9bde0af3fa38b5a30933abc6e9dbd}{\+\_\+\+G\+P\+C\+L\+R1\+\_\+\+L\+E\+D\+\_\+\+M\+A\+SK}~(\hyperlink{group__GPIO_gad929eafe7e55e1d2835b8a2f081cf34c}{\+\_\+\+G\+P\+C\+L\+R1\+\_\+\+P47\+\_\+\+M\+A\+SK})
+\begin{DoxyCompactList}\small\item\em G\+P\+IO L\+ED Mask For {\ttfamily C\+L\+R1} {\ttfamily }. (Tied to Pin 47) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gafeebbd2589412bdf2a7adc37273c8701}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+F\+R\+EQ}~(1000000)
+\item 
+\#define \hyperlink{group__SYSTIMER_ga70b5db2a1bac4db4cc0b1a7d32318931}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+S\+\_\+\+A\+D\+DR}~(0x20003000)
+\begin{DoxyCompactList}\small\item\em System Timer Control / Status, 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gab2062059c3d04229aa948a7bbbfbd18c}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+\_\+\+A\+D\+DR}~(0x20003004)
+\begin{DoxyCompactList}\small\item\em System Timer Counter Lower 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_ga19c4451a4590b53adb2369ef8a92b026}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+H\+I\+\_\+\+A\+D\+DR}~(0x20003008)
+\begin{DoxyCompactList}\small\item\em System Timer Counter Higher 32 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_ga47fa566f203db74cf2cef46da4cc2cf2}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C0\+\_\+\+A\+D\+DR}~(0x2000300\+C)
+\begin{DoxyCompactList}\small\item\em System Timer Compare 0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gacd54e6d83dd922375b7400f59d1581f6}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C1\+\_\+\+A\+D\+DR}~(0x20003010)
+\begin{DoxyCompactList}\small\item\em System Timer Compare 1. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_ga8d9e4fe8ecd86538791452ac1e7edd5b}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C2\+\_\+\+A\+D\+DR}~(0x20003014)
+\begin{DoxyCompactList}\small\item\em System Timer Compare 2. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_ga54fb323df9fbd28f70a37115688fb446}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C3\+\_\+\+A\+D\+DR}~(0x20003018)
+\begin{DoxyCompactList}\small\item\em System Timer Compare 3. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gab9771d55af9d871738ad146a91960714}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+S\+\_\+\+M0\+\_\+\+M\+A\+SK}~(1 $<$$<$ 0)
+\begin{DoxyCompactList}\small\item\em System Timer Match 0, I\+RQ line 0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gab109bde4c677a0039671e9d75100188b}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+S\+\_\+\+M1\+\_\+\+M\+A\+SK}~(1 $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em System Timer Match 1, I\+RQ line 1. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_ga2d59b9d5a0ad373d301f97dbac765adf}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+S\+\_\+\+M2\+\_\+\+M\+A\+SK}~(1 $<$$<$ 2)
+\begin{DoxyCompactList}\small\item\em System Timer Match 2, I\+RQ line 2. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSTIMER_gaa925270b7e407cdf21f76e3bc5aee07f}{S\+Y\+S\+T\+I\+M\+E\+R\+\_\+\+C\+S\+\_\+\+M3\+\_\+\+M\+A\+SK}~(1 $<$$<$ 3)
+\begin{DoxyCompactList}\small\item\em System Timer Match 3, I\+RQ line 3. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}~(0x2000\+B400)
+\begin{DoxyCompactList}\small\item\em Timer Load Register The timer load register sets the timer for the timer to count down. This value is loaded into the timer value register after the load register has been written or if the timer-\/value register has counted down to 0. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga65e968877416839d0a1f53f2b1fffd25}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}~(0x2000\+B404)
+\begin{DoxyCompactList}\small\item\em Timer Value Register (Read only) This register holds the current timer value and is counted down when the counter is running. It is counted down each timer clock until the value 0 is reached. Then the value register is re-\/loaded from the timer load register and the interrupt pending bit is set. The timer count down speed is set by the timer pre-\/divide register. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_gae31f9fc9d4a23333bf1b7d21c5342c6c}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}~(0x2000\+B408)
+\begin{DoxyCompactList}\small\item\em Timer Control Register See peripheral guide page 197. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}~(0x2000\+B40\+C)
+\begin{DoxyCompactList}\small\item\em Write only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x2000\+B410)
+\begin{DoxyCompactList}\small\item\em Read only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x2000\+B414)
+\begin{DoxyCompactList}\small\item\em Read only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}~(0x2000\+B418)
+\begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}~(0x2000\+B41\+C)
+\begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga30394a85f91a3fa5c6d45b62e3c75932}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}~(0x2000\+B420)
+\begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga334b052c50be613285e01548f10ea332}{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}~(0x2000\+B200)
+\begin{DoxyCompactList}\small\item\em Pending A\+RM specific I\+R\+Qs status, with additional info. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_gaf4fff6d032f44ce818e9bcbb4f82baea}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B204)
+\begin{DoxyCompactList}\small\item\em Pending shared I\+R\+Qs status 1. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga9633641d3c1c1f3c450c35cbe28f0df9}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B208)
+\begin{DoxyCompactList}\small\item\em Pending shared I\+R\+Qs status 2. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}~(0x2000\+B20\+C)
+\item 
+\#define \hyperlink{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B210)
+\item 
+\#define \hyperlink{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B214)
+\item 
+\#define \hyperlink{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}~(0x2000\+B218)
+\item 
+\#define \hyperlink{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B21\+C)
+\item 
+\#define \hyperlink{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B220)
+\item 
+\#define \hyperlink{group__Peripherals_ga733b1f250b79a62906eca0763189fc79}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}~(0x2000\+B224)
+\item 
+\#define \hyperlink{group__Peripherals_ga536add31e36eeec9bbb6506f798d9761}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{group__Peripherals_ga0ad6222d2e26c8a0a0353842875077d7}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}~(1 $<$$<$ 3)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int8\+\_\+t \hyperlink{group__Common_ga9e382f207c65ca13ab4ae98363aeda80}{s8}
+\begin{DoxyCompactList}\small\item\em 8 bit signed int \end{DoxyCompactList}\item 
+typedef int16\+\_\+t \hyperlink{group__Common_gaa980e2c02ba2305e0f489d5650655425}{s16}
+\begin{DoxyCompactList}\small\item\em 16 bit signed int \end{DoxyCompactList}\item 
+typedef int32\+\_\+t \hyperlink{group__Common_gae9b1af5c037e57a98884758875d3a7c4}{s32}
+\begin{DoxyCompactList}\small\item\em 32 bit signed int \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \hyperlink{group__Common_ga350c6fc928e3bdc6c6486268ac8fb269}{s64}
+\begin{DoxyCompactList}\small\item\em 64 bit signed int \end{DoxyCompactList}\item 
+typedef uint8\+\_\+t \hyperlink{group__Common_ga92c50087ca0e64fa93fc59402c55f8ca}{u8}
+\begin{DoxyCompactList}\small\item\em 8 bit unsigned int \end{DoxyCompactList}\item 
+typedef uint16\+\_\+t \hyperlink{group__Common_gace9d960e74685e2cd84b36132dbbf8aa}{u16}
+\begin{DoxyCompactList}\small\item\em 16 bit unsigned int \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}
+\begin{DoxyCompactList}\small\item\em 32 bit unsigned int \end{DoxyCompactList}\item 
+typedef uint64\+\_\+t \hyperlink{group__Common_ga3f7e2bcbb0b4c338f3c4f6c937cd4234}{u64}
+\begin{DoxyCompactList}\small\item\em 64 bit unsigned int \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{group__Common_ga91ad9478d81a7aaf2593e8d9c3d06a14}{uint}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__Common_ga9feb7476507383309c8e3ff2648016f3}{nop} ()
+\begin{DoxyCompactList}\small\item\em nop \end{DoxyCompactList}\item 
+void \hyperlink{group__Peripherals_ga5e0e58b5a11a26c6eb46b74716e8801b}{dmb} (void)
+\begin{DoxyCompactList}\small\item\em Use between different peripheral read / writes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Register and system definitions for the B\+C\+M2835. 
+
+{\itshape Example Projects}\+:
+
+\href{https://embedded-xinu.readthedocs.io/en/latest/index.html}{\tt xinu}
+
+Based on the following docs\+:
+
+\href{https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2835/BCM2835-ARM-Peripherals.pdf}{\tt https\+://www.\+raspberrypi.\+org/documentation/hardware/raspberrypi/bcm2835/\+B\+C\+M2835-\/\+A\+R\+M-\/\+Peripherals.\+pdf}
+
+\href{http://elinux.org/RPi_Low-level_peripherals}{\tt http\+://elinux.\+org/\+R\+Pi\+\_\+\+Low-\/level\+\_\+peripherals}
+
+\href{http://www.scribd.com/doc/101830961/GPIO-Pads-Control2}{\tt http\+://www.\+scribd.\+com/doc/101830961/\+G\+P\+I\+O-\/\+Pads-\/\+Control2} 

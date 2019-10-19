@@ -1,0 +1,5 @@
+# Set all gpio pins to be inputs 
+gpio=0,53=ip
+
+# With pull down
+gpio=0,53=pd

@@ -1,63 +1,34 @@
-#include "Arm.h"
+#include "GPIO.h"
 
-
+#define UNUSED(a) (void) a
 
 void
-TimerIRQHandler(void)
+exit(u32 code)
 {
+    UNUSED(code);
 
+    for(;;) {}
 }
 
-int 
+void 
 main(void)
 {
-    dmb();
-    // Enable IRQ line 1, which is our systimer timer compare register 1
-    *IRQ_ENABLE_IRQ_1 = (*IRQ_ENABLE_IRQ_1 | (IRQ_PENDING_1_C1_MASK));
+    SetGPIOMode(GPIO_LED, GPIO_OUTPUT);
+    SetGPIOMode(GPIO_2, GPIO_INPUT);
 
-    dmb();
-
-    uint w = *FSEL4;
-
-    // Set only the led pin to an output
-    w &= ~(7 << 21);
-    w |= (1 << 21);
-
-    *FSEL4 = w;
-
-    *CLR1 = _CLR1_LED_MASK;
-
-    dmb();
-
-    // Clear the compare register
-    *SYSTIMER_CS = SYSTIMER_CS_M1_MASK;
-
-    // Set our compare register for a two sec freq
-    *SYSTIMER_C1 = 2000000; 
-
-    bool even = true;
     while (1)
     {
-        if ((*SYSTIMER_CS) & SYSTIMER_CS_M1_MASK)
+        bool shouldLight = !(*GPLEV0 & (1 << GPIO_2));
+
+        if (shouldLight)
         {
-            *SYSTIMER_CS = SYSTIMER_CS_M1_MASK;
-
-            if (even)
-            {
-                dmb();
-                *CLR1 = _CLR1_LED_MASK;
-                dmb();
-            }
-            else
-            {
-                dmb();
-                *SET1 = _SET1_LED_MASK;
-                dmb();
-            }
-
-            even = !even;
+            ClearGPIO(GPIO_LED);
+        }
+        else
+        {
+            SetGPIO(GPIO_LED);
         }
     }
 
-    return 0;
+    exit(0);
 }

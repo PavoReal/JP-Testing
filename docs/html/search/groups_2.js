@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gpio_105',['GPIO',['../group__GPIO.html',1,'']]]
+  ['gpio',['GPIO',['../group__GPIO.html',1,'']]]
 ];
