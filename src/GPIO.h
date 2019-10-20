@@ -62,6 +62,7 @@
 
 #define GPIO_OUTPUT GPIO_PIN_OUTPUT
 #define GPIO_INPUT GPIO_PIN_INPUT
+#define GPIO_ALT5 (2)
 
 void
 SetGPIOMode(u32 pin, u32 mode)

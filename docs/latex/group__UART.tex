@@ -8,7 +8,7 @@
 \#define \hyperlink{group__UART_gab7f0b281001eba1983b44e5bd3de3624}{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+E\+R\+\_\+\+A\+D\+DR}~(0x20215044)
 \begin{DoxyCompactList}\small\item\em Mini Uart Interrupt Enable, 8 bits. \end{DoxyCompactList}\item 
 \#define \hyperlink{group__UART_ga671559e30e80a6d003fcb46ac99d7723}{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+I\+R\+\_\+\+A\+D\+DR}~(0x20215048)
-\begin{DoxyCompactList}\small\item\em Mini Uart Interrupt Identify, 8 bits. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mini Uart Interrupt Identify, 8 bit The data sheet totally fucked up this register, see \href{https://elinux.org/BCM2835_datasheet_errata#p12}{\tt https\+://elinux.\+org/\+B\+C\+M2835\+\_\+datasheet\+\_\+errata\#p12} \end{DoxyCompactList}\item 
 \#define \hyperlink{group__UART_gaaed9b3cea1302e02eb4ac7cf34e4e166}{A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+C\+R\+\_\+\+A\+D\+DR}~(0x2021504\+C)
 \begin{DoxyCompactList}\small\item\em Mini Uart Line Control, 8 bits. \end{DoxyCompactList}\item 
 \#define \hyperlink{group__UART_ga76017c2dd6557c4d387828112f1335fe}{A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+C\+R\+\_\+\+A\+D\+DR}~(0x20215050)
@@ -28,10 +28,7 @@
 
 
 \subsection{Detailed Description}
-Mini Uart I/O Data, 8 bits \begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
-
+Mini Uart I/O Data, 8 bits 
 
 \subsection{Macro Definition Documentation}
 \mbox{\Hypertarget{group__UART_ga8430fd87ed60df61a2cf173f54c15549}\label{group__UART_ga8430fd87ed60df61a2cf173f54c15549}} 
@@ -49,7 +46,7 @@ Mini Uart Baudrate, 16 bits.
 \end{DoxyNote}
 
 
-Definition at line 137 of file B\+C\+M2835.\+h.
+Definition at line 152 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga9c3d11375873d03e2bb8b93d3ae970fb}\label{group__UART_ga9c3d11375873d03e2bb8b93d3ae970fb}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+C\+N\+T\+L\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+C\+N\+T\+L\+\_\+\+A\+D\+DR}}
@@ -66,7 +63,7 @@ Mini Uart Extra Control, 8 bits.
 \end{DoxyNote}
 
 
-Definition at line 131 of file B\+C\+M2835.\+h.
+Definition at line 146 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_gab7f0b281001eba1983b44e5bd3de3624}\label{group__UART_gab7f0b281001eba1983b44e5bd3de3624}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+E\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+E\+R\+\_\+\+A\+D\+DR}}
@@ -78,12 +75,9 @@ Definition at line 131 of file B\+C\+M2835.\+h.
 
 Mini Uart Interrupt Enable, 8 bits. 
 
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
 
 
-Definition at line 110 of file B\+C\+M2835.\+h.
+Definition at line 124 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga671559e30e80a6d003fcb46ac99d7723}\label{group__UART_ga671559e30e80a6d003fcb46ac99d7723}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+I\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+I\+R\+\_\+\+A\+D\+DR}}
@@ -93,14 +87,11 @@ Definition at line 110 of file B\+C\+M2835.\+h.
 
 
 
-Mini Uart Interrupt Identify, 8 bits. 
-
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
+Mini Uart Interrupt Identify, 8 bit The data sheet totally fucked up this register, see \href{https://elinux.org/BCM2835_datasheet_errata#p12}{\tt https\+://elinux.\+org/\+B\+C\+M2835\+\_\+datasheet\+\_\+errata\#p12} 
 
 
-Definition at line 113 of file B\+C\+M2835.\+h.
+
+Definition at line 128 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_gad430fbd4dcccfc37e6a75aac3ed1b407}\label{group__UART_gad430fbd4dcccfc37e6a75aac3ed1b407}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+O\+\_\+\+R\+E\+G\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+I\+O\+\_\+\+R\+E\+G\+\_\+\+A\+D\+DR}}
@@ -110,7 +101,7 @@ Definition at line 113 of file B\+C\+M2835.\+h.
 
 
 
-Definition at line 107 of file B\+C\+M2835.\+h.
+Definition at line 121 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_gaaed9b3cea1302e02eb4ac7cf34e4e166}\label{group__UART_gaaed9b3cea1302e02eb4ac7cf34e4e166}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+C\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+C\+R\+\_\+\+A\+D\+DR}}
@@ -122,12 +113,9 @@ Definition at line 107 of file B\+C\+M2835.\+h.
 
 Mini Uart Line Control, 8 bits. 
 
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
 
 
-Definition at line 116 of file B\+C\+M2835.\+h.
+Definition at line 131 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga118983fa3b92ba87e7d341722fa0bc31}\label{group__UART_ga118983fa3b92ba87e7d341722fa0bc31}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+S\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+L\+S\+R\+\_\+\+A\+D\+DR}}
@@ -144,7 +132,7 @@ Mini Uart Line Status, 8 bits.
 \end{DoxyNote}
 
 
-Definition at line 122 of file B\+C\+M2835.\+h.
+Definition at line 137 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga76017c2dd6557c4d387828112f1335fe}\label{group__UART_ga76017c2dd6557c4d387828112f1335fe}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+C\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+C\+R\+\_\+\+A\+D\+DR}}
@@ -156,12 +144,9 @@ Definition at line 122 of file B\+C\+M2835.\+h.
 
 Mini Uart Modem Control, 8 bits. 
 
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
 
 
-Definition at line 119 of file B\+C\+M2835.\+h.
+Definition at line 134 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_gad7e37af940a9ff96e6aba9d307b926be}\label{group__UART_gad7e37af940a9ff96e6aba9d307b926be}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+S\+R\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+M\+S\+R\+\_\+\+A\+D\+DR}}
@@ -178,7 +163,7 @@ Mini Uart Modem Status, 8 bits.
 \end{DoxyNote}
 
 
-Definition at line 125 of file B\+C\+M2835.\+h.
+Definition at line 140 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga34eb1e827236c566957962b30be74496}\label{group__UART_ga34eb1e827236c566957962b30be74496}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+C\+R\+A\+T\+C\+H\+\_\+\+A\+D\+DR}}
@@ -195,7 +180,7 @@ Mini Uart Scratch, 8 bits.
 \end{DoxyNote}
 
 
-Definition at line 128 of file B\+C\+M2835.\+h.
+Definition at line 143 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__UART_ga3ab600905dcef74e8756dcc8d54c6ef9}\label{group__UART_ga3ab600905dcef74e8756dcc8d54c6ef9}} 
 \index{U\+A\+RT@{U\+A\+RT}!A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+M\+U\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}}
@@ -212,5 +197,5 @@ Mini Uart Extra Status, 32 bits.
 \end{DoxyNote}
 
 
-Definition at line 134 of file B\+C\+M2835.\+h.
+Definition at line 149 of file B\+C\+M2835.\+h.
 

@@ -6,8 +6,9 @@ AS=arm-none-eabi-as
 OBJDUMP=arm-none-eabi-objdump
 OBJCOPY=arm-none-eabi-objcopy
 
-ASM_FLAGS="--warn --fatal-warnings"
-CC_FLAGS="-Wall -Wextra -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c"
+ASM_FLAGS="--warn --fatal-warnings -mcpu=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard"
+CC_FLAGS="-Wall -Wextra -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfpu=vfp -mfloat-abi=hard"
+LD_FLAGS="-L/opt/cross-compiler/lib/gcc/arm-none-eabi/9.2.0/ -lgcc"
 
 mkdir -p build/
 
@@ -27,8 +28,10 @@ for i in ../src/*.c; do
     $CC $CC_FLAGS $i -o $(basename $i).o
 done
 
-echo "$LD *.o -o main.elf"
-$LD *.o -o main.elf
+# cp ../src/memmap ./
+
+echo "$LD $LD_FLAGS *.o -o main.elf"
+$LD $LD_FLAGS *.o -o main.elf
 # $OBJDUMP -D main.elf > main.list
 # $OBJCOPY --srec-forceS3 main.elf -O srec main.srec
 echo "$OBJCOPY main.elf -O binary kernel.img"

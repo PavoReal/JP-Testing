@@ -54,6 +54,7 @@ var GPIO_8h =
     [ "GPIO_7", "GPIO_8h.html#a1aa7614f3af0705a5d825f889f38559e", null ],
     [ "GPIO_8", "GPIO_8h.html#a4b251843a330337e4bbc76b5af1b26d4", null ],
     [ "GPIO_9", "GPIO_8h.html#a90279a113f4dce2ae2ccf17c0d2bc7b7", null ],
+    [ "GPIO_ALT5", "GPIO_8h.html#a3dd9dcd16c60974987c3e84fd3b6aedd", null ],
     [ "GPIO_INPUT", "GPIO_8h.html#a7be6a0cc9aa65da1d4ee5751b4085853", null ],
     [ "GPIO_LED", "GPIO_8h.html#af1cd76599fb3d13e03b66557ea1e66de", null ],
     [ "GPIO_OUTPUT", "GPIO_8h.html#a0db9fe8a278e6ab7c5c6f14fe58e5eb1", null ],

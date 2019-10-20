@@ -13,13 +13,61 @@
 \#define \hyperlink{group__Auxilliary_ga639b2045d2c60d72ba8e023bcdcf32a1}{A\+U\+X\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x20215000)
 \begin{DoxyCompactList}\small\item\em Auxiliary Interrupt Status, 3 bits. \end{DoxyCompactList}\item 
 \#define \hyperlink{group__Auxilliary_gab0a21230d9d57f4131ce59a3c610593f}{A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR}~(0x20215004)
-\begin{DoxyCompactList}\small\item\em Auxiliary Enables, 3 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Auxiliary Enables, 3 bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Auxilliary_gaa8e8d454e69ce6fa80fc26e805e21685}{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK}~(1)
+\begin{DoxyCompactList}\small\item\em Write high to A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+ES to enable the U\+A\+RT If set the mini U\+A\+RT is enabled. The U\+A\+RT will immediately start receiving data, especially if the U\+A\+R\+T1\+\_\+\+RX line is low. If clear the mini U\+A\+RT is disabled. That also disables any mini U\+A\+RT register acces. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Auxilliary_gae192c6ccec73788912e4c86332809303}{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK}~(2)
+\begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Auxilliary_ga65e995e623899837a9f8f117cfb06093}{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK}~(4)
+\begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
 \subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__Auxilliary_gae192c6ccec73788912e4c86332809303}\label{group__Auxilliary_gae192c6ccec73788912e4c86332809303}} 
+\index{Auxilliary@{Auxilliary}!\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK}}
+\index{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK}!Auxilliary@{Auxilliary}}
+\subsubsection{\texorpdfstring{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK}{\_AUX\_ENABLES\_SP1\_MASK}}
+{\footnotesize\ttfamily \#define \+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P1\+\_\+\+M\+A\+SK~(2)}
+
+
+
+T\+O\+DO. 
+
+
+
+Definition at line 110 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Auxilliary_ga65e995e623899837a9f8f117cfb06093}\label{group__Auxilliary_ga65e995e623899837a9f8f117cfb06093}} 
+\index{Auxilliary@{Auxilliary}!\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK}}
+\index{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK}!Auxilliary@{Auxilliary}}
+\subsubsection{\texorpdfstring{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK}{\_AUX\_ENABLES\_SPI2\_MASK}}
+{\footnotesize\ttfamily \#define \+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+S\+P\+I2\+\_\+\+M\+A\+SK~(4)}
+
+
+
+T\+O\+DO. 
+
+
+
+Definition at line 113 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Auxilliary_gaa8e8d454e69ce6fa80fc26e805e21685}\label{group__Auxilliary_gaa8e8d454e69ce6fa80fc26e805e21685}} 
+\index{Auxilliary@{Auxilliary}!\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK}}
+\index{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK@{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK}!Auxilliary@{Auxilliary}}
+\subsubsection{\texorpdfstring{\+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK}{\_AUX\_ENABLES\_UART\_MASK}}
+{\footnotesize\ttfamily \#define \+\_\+\+A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+U\+A\+R\+T\+\_\+\+M\+A\+SK~(1)}
+
+
+
+Write high to A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+ES to enable the U\+A\+RT If set the mini U\+A\+RT is enabled. The U\+A\+RT will immediately start receiving data, especially if the U\+A\+R\+T1\+\_\+\+RX line is low. If clear the mini U\+A\+RT is disabled. That also disables any mini U\+A\+RT register acces. 
+
+
+
+Definition at line 107 of file B\+C\+M2835.\+h.
+
 \mbox{\Hypertarget{group__Auxilliary_gab0a21230d9d57f4131ce59a3c610593f}\label{group__Auxilliary_gab0a21230d9d57f4131ce59a3c610593f}} 
 \index{Auxilliary@{Auxilliary}!A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR}}
 \index{A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR@{A\+U\+X\+\_\+\+E\+N\+A\+B\+L\+E\+S\+\_\+\+A\+D\+DR}!Auxilliary@{Auxilliary}}
@@ -30,9 +78,6 @@
 
 Auxiliary Enables, 3 bits. 
 
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
 
 
 Definition at line 102 of file B\+C\+M2835.\+h.
@@ -47,9 +92,6 @@ Definition at line 102 of file B\+C\+M2835.\+h.
 
 Auxiliary Interrupt Status, 3 bits. 
 
-\begin{DoxyNote}{Note}
-(Peacock)\+: This needs to be verified 
-\end{DoxyNote}
 
 
 Definition at line 99 of file B\+C\+M2835.\+h.

@@ -54,6 +54,7 @@ var searchData=
   ['gpio_5f7',['GPIO_7',['../GPIO_8h.html#a1aa7614f3af0705a5d825f889f38559e',1,'GPIO.h']]],
   ['gpio_5f8',['GPIO_8',['../GPIO_8h.html#a4b251843a330337e4bbc76b5af1b26d4',1,'GPIO.h']]],
   ['gpio_5f9',['GPIO_9',['../GPIO_8h.html#a90279a113f4dce2ae2ccf17c0d2bc7b7',1,'GPIO.h']]],
+  ['gpio_5falt5',['GPIO_ALT5',['../GPIO_8h.html#a3dd9dcd16c60974987c3e84fd3b6aedd',1,'GPIO.h']]],
   ['gpio_5finput',['GPIO_INPUT',['../GPIO_8h.html#a7be6a0cc9aa65da1d4ee5751b4085853',1,'GPIO.h']]],
   ['gpio_5fled',['GPIO_LED',['../GPIO_8h.html#af1cd76599fb3d13e03b66557ea1e66de',1,'GPIO.h']]],
   ['gpio_5foutput',['GPIO_OUTPUT',['../GPIO_8h.html#a0db9fe8a278e6ab7c5c6f14fe58e5eb1',1,'GPIO.h']]]

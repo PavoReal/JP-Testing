@@ -17,7 +17,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BCM2835_8h.html",
-"group__UART.html#gaaed9b3cea1302e02eb4ac7cf34e4e166"
+"group__UART.html#ga671559e30e80a6d003fcb46ac99d7723"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

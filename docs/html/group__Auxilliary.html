@@ -102,9 +102,72 @@ Macros</h2></td></tr>
 <tr class="memitem:gab0a21230d9d57f4131ce59a3c610593f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Auxilliary.html#gab0a21230d9d57f4131ce59a3c610593f">AUX_ENABLES_ADDR</a>&#160;&#160;&#160;(0x20215004)</td></tr>
 <tr class="memdesc:gab0a21230d9d57f4131ce59a3c610593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary Enables, 3 bits.  <a href="#gab0a21230d9d57f4131ce59a3c610593f">More...</a><br /></td></tr>
 <tr class="separator:gab0a21230d9d57f4131ce59a3c610593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8e8d454e69ce6fa80fc26e805e21685"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Auxilliary.html#gaa8e8d454e69ce6fa80fc26e805e21685">_AUX_ENABLES_UART_MASK</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:gaa8e8d454e69ce6fa80fc26e805e21685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write high to AUX_ENABLES to enable the UART If set the mini UART is enabled. The UART will immediately start receiving data, especially if the UART1_RX line is low. If clear the mini UART is disabled. That also disables any mini UART register acces.  <a href="#gaa8e8d454e69ce6fa80fc26e805e21685">More...</a><br /></td></tr>
+<tr class="separator:gaa8e8d454e69ce6fa80fc26e805e21685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae192c6ccec73788912e4c86332809303"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Auxilliary.html#gae192c6ccec73788912e4c86332809303">_AUX_ENABLES_SP1_MASK</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:gae192c6ccec73788912e4c86332809303"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="#gae192c6ccec73788912e4c86332809303">More...</a><br /></td></tr>
+<tr class="separator:gae192c6ccec73788912e4c86332809303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65e995e623899837a9f8f117cfb06093"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Auxilliary.html#ga65e995e623899837a9f8f117cfb06093">_AUX_ENABLES_SPI2_MASK</a>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memdesc:ga65e995e623899837a9f8f117cfb06093"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="#ga65e995e623899837a9f8f117cfb06093">More...</a><br /></td></tr>
+<tr class="separator:ga65e995e623899837a9f8f117cfb06093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae192c6ccec73788912e4c86332809303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae192c6ccec73788912e4c86332809303">&#9670;&nbsp;</a></span>_AUX_ENABLES_SP1_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _AUX_ENABLES_SP1_MASK&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TODO. </p>
+
+<p class="definition">Definition at line <a class="el" href="BCM2835_8h_source.html#l00110">110</a> of file <a class="el" href="BCM2835_8h_source.html">BCM2835.h</a>.</p>
+
+</div>
+</div>
+<a id="ga65e995e623899837a9f8f117cfb06093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65e995e623899837a9f8f117cfb06093">&#9670;&nbsp;</a></span>_AUX_ENABLES_SPI2_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _AUX_ENABLES_SPI2_MASK&#160;&#160;&#160;(4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TODO. </p>
+
+<p class="definition">Definition at line <a class="el" href="BCM2835_8h_source.html#l00113">113</a> of file <a class="el" href="BCM2835_8h_source.html">BCM2835.h</a>.</p>
+
+</div>
+</div>
+<a id="gaa8e8d454e69ce6fa80fc26e805e21685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8e8d454e69ce6fa80fc26e805e21685">&#9670;&nbsp;</a></span>_AUX_ENABLES_UART_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _AUX_ENABLES_UART_MASK&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write high to AUX_ENABLES to enable the UART If set the mini UART is enabled. The UART will immediately start receiving data, especially if the UART1_RX line is low. If clear the mini UART is disabled. That also disables any mini UART register acces. </p>
+
+<p class="definition">Definition at line <a class="el" href="BCM2835_8h_source.html#l00107">107</a> of file <a class="el" href="BCM2835_8h_source.html">BCM2835.h</a>.</p>
+
+</div>
+</div>
 <a id="gab0a21230d9d57f4131ce59a3c610593f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab0a21230d9d57f4131ce59a3c610593f">&#9670;&nbsp;</a></span>AUX_ENABLES_ADDR</h2>
 
@@ -118,7 +181,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Auxiliary Enables, 3 bits. </p>
-<dl class="section note"><dt>Note</dt><dd>(Peacock): This needs to be verified </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="BCM2835_8h_source.html#l00102">102</a> of file <a class="el" href="BCM2835_8h_source.html">BCM2835.h</a>.</p>
 
@@ -137,7 +199,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Auxiliary Interrupt Status, 3 bits. </p>
-<dl class="section note"><dt>Note</dt><dd>(Peacock): This needs to be verified </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="BCM2835_8h_source.html#l00099">99</a> of file <a class="el" href="BCM2835_8h_source.html">BCM2835.h</a>.</p>
 

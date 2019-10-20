@@ -95,46 +95,76 @@ dmb(void);
 /// \addtogroup Auxilliary
 /// @{
 
-/// Auxiliary Interrupt Status, 3 bits \note(Peacock): This needs to be verified
+/// Auxiliary Interrupt Status, 3 bits
 #define AUX_IRQ_ADDR (0x20215000)
 
-/// Auxiliary Enables, 3 bits \note(Peacock): This needs to be verified
+/// Auxiliary Enables, 3 bits
 #define AUX_ENABLES_ADDR (0x20215004)
+
+/// \brief Write high to AUX_ENABLES to enable the UART
+/// If set the mini UART is enabled. The UART will immediately start receiving data, especially if the UART1_RX line is
+/// low. If clear the mini UART is disabled. That also disables any mini UART register acces
+#define _AUX_ENABLES_UART_MASK (1)
+
+/// TODO
+#define _AUX_ENABLES_SP1_MASK (2)
+
+/// TODO
+#define _AUX_ENABLES_SPI2_MASK (4)
+
+static volatile u8 * const AUX_IRQ     = (u8*) AUX_IRQ_ADDR;
+static volatile u8 * const AUX_ENABLES = (u8*) AUX_ENABLES_ADDR;
 
 /// \addtogroup UART
 /// @{
-/// Mini Uart I/O Data, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart I/O Data, 8 bits 
 #define AUX_MU_IO_REG_ADDR (0x20215040)
 
-/// Mini Uart Interrupt Enable, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Interrupt Enable, 8 bits
 #define AUX_MU_IER_ADDR (0x20215044)
 
-/// Mini Uart Interrupt Identify, 8 bits \note(Peacock): This needs to be verified
+/// \brief Mini Uart Interrupt Identify, 8 bits
+/// The data sheet totally fucked up this register, see [https://elinux.org/BCM2835_datasheet_errata#p12](https://elinux.org/BCM2835_datasheet_errata#p12)
 #define AUX_MU_IIR_ADDR (0x20215048)
 
-/// Mini Uart Line Control, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Line Control, 8 bits
 #define AUX_MU_LCR_ADDR (0x2021504C)
 
-/// Mini Uart Modem Control, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Modem Control, 8 bits
 #define AUX_MU_MCR_ADDR (0x20215050)
 
-/// Mini Uart Line Status, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Line Status, 8 bits
 #define AUX_MU_LSR_ADDR (0x20215054)
 
-/// Mini Uart Modem Status, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Modem Status, 8 bits
 #define AUX_MU_MSR_ADDR (0x20215058)
 
-/// Mini Uart Scratch, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Scratch, 8 bits
 #define AUX_MU_SCRATCH_ADDR (0x2021505C)
 
-/// Mini Uart Extra Control, 8 bits \note(Peacock): This needs to be verified
+/// Mini Uart Extra Control, 8 bits
 #define AUX_MU_CNTL_ADDR (0x20215060)
 
-/// Mini Uart Extra Status, 32 bits \note(Peacock): This needs to be verified
+/// Mini Uart Extra Status, 32 bits
 #define AUX_MU_STAT_ADDR (0x20215064)
 
-/// Mini Uart Baudrate, 16 bits \note(Peacock): This needs to be verified
+/// Mini Uart Baudrate, 16 bits
 #define AUX_MU_BAUD_ADDR  (0x20215068)
+
+/// This bit is set if the transmit FIFO can accept at least one byte. 
+#define _AUX_MU_LSR_TRANS_EMPTY_MASK (0x20)
+
+static volatile u8 * const AUX_MU_IO       = (u8*) AUX_MU_IO_REG_ADDR;
+static volatile u8 * const AUX_MU_IER      = (u8*) AUX_MU_IER_ADDR;
+static volatile u8 * const AUX_MU_IIR      = (u8*) AUX_MU_IIR_ADDR;
+static volatile u8 * const AUX_MU_LCR      = (u8*) AUX_MU_LCR_ADDR;
+static volatile u8 * const AUX_MU_MCR      = (u8*) AUX_MU_MCR_ADDR;
+static volatile u8 * const AUX_MU_LSR      = (u8*) AUX_MU_LSR_ADDR;
+static volatile u8 * const AUX_MU_MSR      = (u8*) AUX_MU_MSR_ADDR;
+static volatile u8 * const AUX_MU_SCRATCH  = (u8*) AUX_MU_SCRATCH_ADDR;
+static volatile u8 * const AUX_MU_CNTL     = (u8*) AUX_MU_CNTL_ADDR;
+static volatile u32 * const AUX_MU_STAT    = (u32*) AUX_MU_STAT_ADDR;
+static volatile u16 * const AUX_MU_BAUD    = (u16*) AUX_MU_BAUD_ADDR;
 
 /// @}
 /// \addtogroup SPI
