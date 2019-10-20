@@ -1,4 +1,0 @@
-.;
-thumb;@mthumb
-arm/autofp/v5te/fpu;@marm@mfpu=auto@march=armv5te+fp@mfloat-abi=hard
-thumb/autofp/v7/fpu;@mthumb@mfpu=auto@march=armv7+fp@mfloat-abi=hard

@@ -84,11 +84,12 @@ main(void)
     dmb();
     *AUX_MU_CNTL = 2;
 
-    u32 number = 0;
+    float number = 0;
     char buffer[512];
     while (1)
     {
-        sprintf(buffer, "This shit takes forever #%lu", number++);
+        sprintf(buffer, "This shit takes forever #%f", number);
+        number += 0.1f;
         UART_Puts(buffer);
         DelayS(1);
     }

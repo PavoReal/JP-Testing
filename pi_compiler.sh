@@ -7,7 +7,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	set -x # Echo commands
 
-	export TARGET=arm-none-eabihf
+	export TARGET=arm-none-eabi
 	export PREFIX=/opt/cross-compiler
 	export JOBS='8' # If compilation fails, set this to 1
 
@@ -41,7 +41,7 @@ then
 	./contrib/download_prerequisites
 	mkdir build
 	pushd build
-		../configure --target=$TARGET --prefix=$PREFIX --without-headers --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --enable-frame-pointer=no --with-float=hard
+		../configure --target=$TARGET --prefix=$PREFIX --without-headers --with-gnu-as --with-gnu-ld --enable-languages=c --enable-frame-pointer=no
 		make all-gcc -j $JOBS
 		sudo make install-gcc
 	popd
@@ -59,7 +59,7 @@ then
 
 	pushd gcc-9.2.0
 	pushd build
-		../configure --target=$TARGET --prefix=$PREFIX --with-newlib --without-headers --with-gnu-as --with-gnu-ld --enable-languages=c,c++ --enable-frame-pointer=no
+		../configure --target=$TARGET --prefix=$PREFIX --with-newlib --without-headers --with-gnu-as --with-gnu-ld --enable-languages=c --enable-frame-pointer=no
 		make -j $JOBS
 		sudo make install
 	popd

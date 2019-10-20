@@ -6,9 +6,9 @@ AS=arm-none-eabi-as
 OBJDUMP=arm-none-eabi-objdump
 OBJCOPY=arm-none-eabi-objcopy
 
-ASM_FLAGS="--warn --fatal-warnings -mcpu=arm1176jzf-s -mfpu=auto -mfloat-abi=hard"
-CC_FLAGS="-Wall -Wextra -Werror -O2 -nostartfiles -ffreestanding -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfpu=auto -mfloat-abi=hard -I../newlib/libc/include "
-LD_FLAGS="-flto -lc -lgcc"
+ASM_FLAGS="--warn --fatal-warnings -mcpu=arm1176jzf-s -mfpu=vfpv2"
+CC_FLAGS="-Wall -Wextra -Werror -O2 -nostartfiles -ffreestanding -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -I../newlib/libc/include"
+LD_FLAGS="-flto -lc"
 
 mkdir -p build/
 
