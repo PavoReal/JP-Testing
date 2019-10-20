@@ -1,8 +1,6 @@
 #include "GPIO.h"
 #include "UART.h"
-
-// #define STB_SPRINTF_IMPLEMENTATION 
-// #include "stb_sprintf.h"
+#include <stdio.h>
 
 #define UNUSED(a) (void) a
 
@@ -86,11 +84,13 @@ main(void)
     dmb();
     *AUX_MU_CNTL = 2;
 
+    u32 number = 0;
+    char buffer[512];
     while (1)
     {
+        sprintf(buffer, "This shit takes forever #%lu", number++);
+        UART_Puts(buffer);
         DelayS(1);
-        UART_Puts("Testy mc test face");
-
     }
 
     exit(0);
