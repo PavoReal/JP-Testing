@@ -1,97 +1,155 @@
-\hypertarget{group__Peripherals}{}\section{Peripherals}
+\hypertarget{group__Peripherals}{}\doxysection{Peripherals}
 \label{group__Peripherals}\index{Peripherals@{Peripherals}}
-\subsection*{Modules}
+\doxysubsection*{Modules}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{group__Auxilliary}{Auxilliary}
+\mbox{\hyperlink{group__Auxilliary}{Auxilliary}}
 \item 
-\hyperlink{group__GPIO}{G\+P\+IO}
+\mbox{\hyperlink{group__GPIO}{G\+P\+IO}}
 \item 
-\hyperlink{group__SYSTIMER}{S\+Y\+S\+T\+I\+M\+ER}
+\mbox{\hyperlink{group__SYSTIMER}{S\+Y\+S\+T\+I\+M\+ER}}
 \item 
-\hyperlink{group__ARM}{A\+RM}
+\mbox{\hyperlink{group__ARM}{A\+RM}}
 \item 
-\hyperlink{group__IRQ}{I\+RQ}
+\mbox{\hyperlink{group__IRQ}{I\+RQ}}
 \end{DoxyCompactItemize}
-\subsection*{Macros}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{group__Peripherals_gac7a1d4c43a8ef81fe4f18a6c49541657}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}~(0x20000000)
+\#define \mbox{\hyperlink{group__Peripherals_gac7a1d4c43a8ef81fe4f18a6c49541657}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}}~(0x20000000)
 \begin{DoxyCompactList}\small\item\em The start of physical peripheral memory. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga49adb525268a836f74bd190622fa100c}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}~(0x20\+F\+F\+F\+F\+F\+F)
+\#define \mbox{\hyperlink{group__Peripherals_ga49adb525268a836f74bd190622fa100c}{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}}~(0x20\+F\+F\+F\+F\+FF)
 \begin{DoxyCompactList}\small\item\em The end of physical physical memory. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}~(0x2000\+B400)
+\#define \mbox{\hyperlink{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}}~(0x2000\+B400)
 \begin{DoxyCompactList}\small\item\em Timer Load Register The timer load register sets the timer for the timer to count down. This value is loaded into the timer value register after the load register has been written or if the timer-\/value register has counted down to 0. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga65e968877416839d0a1f53f2b1fffd25}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}~(0x2000\+B404)
+\#define \mbox{\hyperlink{group__Peripherals_ga65e968877416839d0a1f53f2b1fffd25}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}}~(0x2000\+B404)
 \begin{DoxyCompactList}\small\item\em Timer Value Register (Read only) This register holds the current timer value and is counted down when the counter is running. It is counted down each timer clock until the value 0 is reached. Then the value register is re-\/loaded from the timer load register and the interrupt pending bit is set. The timer count down speed is set by the timer pre-\/divide register. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_gae31f9fc9d4a23333bf1b7d21c5342c6c}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}~(0x2000\+B408)
-\begin{DoxyCompactList}\small\item\em Timer Control Register See peripheral guide page 197. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}~(0x2000\+B40\+C)
+\#define \mbox{\hyperlink{group__Peripherals_gae31f9fc9d4a23333bf1b7d21c5342c6c}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}}~(0x2000\+B408)
+\begin{DoxyCompactList}\small\item\em Timer Control Register See peripheral guide page 197 ~\newline
+ \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}}~(0x2000\+B40C)
 \begin{DoxyCompactList}\small\item\em Write only. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x2000\+B410)
+\#define \mbox{\hyperlink{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}}~(0x2000\+B410)
 \begin{DoxyCompactList}\small\item\em Read only. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}~(0x2000\+B414)
+\#define \mbox{\hyperlink{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}}~(0x2000\+B414)
 \begin{DoxyCompactList}\small\item\em Read only. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}~(0x2000\+B418)
+\#define \mbox{\hyperlink{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}}~(0x2000\+B418)
 \begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}~(0x2000\+B41\+C)
+\#define \mbox{\hyperlink{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}}~(0x2000\+B41C)
 \begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga30394a85f91a3fa5c6d45b62e3c75932}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}~(0x2000\+B420)
+\#define \mbox{\hyperlink{group__Peripherals_ga30394a85f91a3fa5c6d45b62e3c75932}{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}}~(0x2000\+B420)
 \begin{DoxyCompactList}\small\item\em T\+O\+DO. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga334b052c50be613285e01548f10ea332}{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}~(0x2000\+B200)
+\#define \mbox{\hyperlink{group__Peripherals_ga334b052c50be613285e01548f10ea332}{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}}~(0x2000\+B200)
 \begin{DoxyCompactList}\small\item\em Pending A\+RM specific I\+R\+Qs status, with additional info. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_gaf4fff6d032f44ce818e9bcbb4f82baea}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B204)
+\#define \mbox{\hyperlink{group__Peripherals_gaf4fff6d032f44ce818e9bcbb4f82baea}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}}~(0x2000\+B204)
 \begin{DoxyCompactList}\small\item\em Pending shared I\+R\+Qs status 1. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga9633641d3c1c1f3c450c35cbe28f0df9}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B208)
+\#define \mbox{\hyperlink{group__Peripherals_ga9633641d3c1c1f3c450c35cbe28f0df9}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}}~(0x2000\+B208)
 \begin{DoxyCompactList}\small\item\em Pending shared I\+R\+Qs status 2. \end{DoxyCompactList}\item 
-\#define \hyperlink{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}~(0x2000\+B20\+C)
+\#define \mbox{\hyperlink{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}}~(0x2000\+B20C)
 \item 
-\#define \hyperlink{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B210)
+\#define \mbox{\hyperlink{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}}~(0x2000\+B210)
 \item 
-\#define \hyperlink{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B214)
+\#define \mbox{\hyperlink{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}}~(0x2000\+B214)
 \item 
-\#define \hyperlink{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}~(0x2000\+B218)
+\#define \mbox{\hyperlink{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}}~(0x2000\+B218)
 \item 
-\#define \hyperlink{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}~(0x2000\+B21\+C)
+\#define \mbox{\hyperlink{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}}~(0x2000\+B21C)
 \item 
-\#define \hyperlink{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}~(0x2000\+B220)
+\#define \mbox{\hyperlink{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}}~(0x2000\+B220)
 \item 
-\#define \hyperlink{group__Peripherals_ga733b1f250b79a62906eca0763189fc79}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}~(0x2000\+B224)
+\#define \mbox{\hyperlink{group__Peripherals_ga733b1f250b79a62906eca0763189fc79}{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}}~(0x2000\+B224)
 \item 
-\#define \hyperlink{group__Peripherals_ga536add31e36eeec9bbb6506f798d9761}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}~(1 $<$$<$ 1)
+\#define \mbox{\hyperlink{group__Peripherals_ga536add31e36eeec9bbb6506f798d9761}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}}~(1 $<$$<$ 1)
 \item 
-\#define \hyperlink{group__Peripherals_ga0ad6222d2e26c8a0a0353842875077d7}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}~(1 $<$$<$ 3)
+\#define \mbox{\hyperlink{group__Peripherals_ga0ad6222d2e26c8a0a0353842875077d7}{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}}~(1 $<$$<$ 3)
 \end{DoxyCompactItemize}
-\subsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__Peripherals_ga5e0e58b5a11a26c6eb46b74716e8801b}{dmb} (void)
+void \mbox{\hyperlink{group__Peripherals_ga5e0e58b5a11a26c6eb46b74716e8801b}{dmb}} (void)
 \begin{DoxyCompactList}\small\item\em Use between different peripheral read / writes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 
 
-\subsection{Macro Definition Documentation}
+\doxysubsection{Macro Definition Documentation}
 \mbox{\Hypertarget{group__Peripherals_gae31f9fc9d4a23333bf1b7d21c5342c6c}\label{group__Peripherals_gae31f9fc9d4a23333bf1b7d21c5342c6c}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}{ARM\_TIMER\_CONTROL\_ADDR}}
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_CONTROL\_ADDR@{ARM\_TIMER\_CONTROL\_ADDR}}
+\index{ARM\_TIMER\_CONTROL\_ADDR@{ARM\_TIMER\_CONTROL\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_CONTROL\_ADDR}{ARM\_TIMER\_CONTROL\_ADDR}}
 {\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR~(0x2000\+B408)}
 
 
 
-Timer Control Register See peripheral guide page 197. 
+Timer Control Register See peripheral guide page 197 ~\newline
+ 
 
 
 
-Definition at line 357 of file B\+C\+M2835.\+h.
+Definition at line 360 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga30394a85f91a3fa5c6d45b62e3c75932}\label{group__Peripherals_ga30394a85f91a3fa5c6d45b62e3c75932}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR}{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR}}
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR@{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR}}
+\index{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR@{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR}{ARM\_TIMER\_FREE\_RUNNING\_COUNTER\_ADDR}}
 {\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+F\+R\+E\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+A\+D\+DR~(0x2000\+B420)}
+
+
+
+T\+O\+DO. 
+
+
+
+Definition at line 378 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}\label{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR@{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR}}
+\index{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR@{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR}{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR~(0x2000\+B40C)}
+
+
+
+Write only. 
+
+
+
+Definition at line 363 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}\label{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_LOAD\_ADDR@{ARM\_TIMER\_LOAD\_ADDR}}
+\index{ARM\_TIMER\_LOAD\_ADDR@{ARM\_TIMER\_LOAD\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_LOAD\_ADDR}{ARM\_TIMER\_LOAD\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR~(0x2000\+B400)}
+
+
+
+Timer Load Register The timer load register sets the timer for the timer to count down. This value is loaded into the timer value register after the load register has been written or if the timer-\/value register has counted down to 0. 
+
+
+
+Definition at line 349 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}\label{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_MASKED\_IRQ\_ADDR@{ARM\_TIMER\_MASKED\_IRQ\_ADDR}}
+\index{ARM\_TIMER\_MASKED\_IRQ\_ADDR@{ARM\_TIMER\_MASKED\_IRQ\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_MASKED\_IRQ\_ADDR}{ARM\_TIMER\_MASKED\_IRQ\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR~(0x2000\+B414)}
+
+
+
+Read only. 
+
+
+
+Definition at line 369 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}\label{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_PRE\_DIVIDE\_ADDR@{ARM\_TIMER\_PRE\_DIVIDE\_ADDR}}
+\index{ARM\_TIMER\_PRE\_DIVIDE\_ADDR@{ARM\_TIMER\_PRE\_DIVIDE\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_PRE\_DIVIDE\_ADDR}{ARM\_TIMER\_PRE\_DIVIDE\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR~(0x2000\+B41C)}
 
 
 
@@ -101,39 +159,11 @@ T\+O\+DO.
 
 Definition at line 375 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}\label{group__Peripherals_gab3e45c61e2102e07880830dc96c2fa70}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR}{ARM\_TIMER\_IRQ\_CLEAR\_ACK\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+I\+R\+Q\+\_\+\+C\+L\+E\+A\+R\+\_\+\+A\+C\+K\+\_\+\+A\+D\+DR~(0x2000\+B40\+C)}
-
-
-
-Write only. 
-
-
-
-Definition at line 360 of file B\+C\+M2835.\+h.
-
-\mbox{\Hypertarget{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}\label{group__Peripherals_ga2256ab9b7182daae7cf50e8433c4f49e}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR}{ARM\_TIMER\_LOAD\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+L\+O\+A\+D\+\_\+\+A\+D\+DR~(0x2000\+B400)}
-
-
-
-Timer Load Register The timer load register sets the timer for the timer to count down. This value is loaded into the timer value register after the load register has been written or if the timer-\/value register has counted down to 0. 
-
-
-
-Definition at line 346 of file B\+C\+M2835.\+h.
-
-\mbox{\Hypertarget{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}\label{group__Peripherals_gaafd52e6e5cdf6b4b409b7e0fbdd05e03}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}{ARM\_TIMER\_MASKED\_IRQ\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+S\+K\+E\+D\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR~(0x2000\+B414)}
+\mbox{\Hypertarget{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}\label{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_RAW\_IRQ\_ADDR@{ARM\_TIMER\_RAW\_IRQ\_ADDR}}
+\index{ARM\_TIMER\_RAW\_IRQ\_ADDR@{ARM\_TIMER\_RAW\_IRQ\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_RAW\_IRQ\_ADDR}{ARM\_TIMER\_RAW\_IRQ\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR~(0x2000\+B410)}
 
 
 
@@ -143,11 +173,11 @@ Read only.
 
 Definition at line 366 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}\label{group__Peripherals_ga287e1e99292423e3f652a70f0e7b8462}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR}{ARM\_TIMER\_PRE\_DIVIDE\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+P\+R\+E\+\_\+\+D\+I\+V\+I\+D\+E\+\_\+\+A\+D\+DR~(0x2000\+B41\+C)}
+\mbox{\Hypertarget{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}\label{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}} 
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_RELOAD\_ADDR@{ARM\_TIMER\_RELOAD\_ADDR}}
+\index{ARM\_TIMER\_RELOAD\_ADDR@{ARM\_TIMER\_RELOAD\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_RELOAD\_ADDR}{ARM\_TIMER\_RELOAD\_ADDR}}
+{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR~(0x2000\+B418)}
 
 
 
@@ -157,38 +187,10 @@ T\+O\+DO.
 
 Definition at line 372 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}\label{group__Peripherals_ga2ccc9f962edeb13af9b2ef66be86bd3a}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR}{ARM\_TIMER\_RAW\_IRQ\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+A\+W\+\_\+\+I\+R\+Q\+\_\+\+A\+D\+DR~(0x2000\+B410)}
-
-
-
-Read only. 
-
-
-
-Definition at line 363 of file B\+C\+M2835.\+h.
-
-\mbox{\Hypertarget{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}\label{group__Peripherals_ga778de695286e2e164b1abd77fb282cb1}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR}{ARM\_TIMER\_RELOAD\_ADDR}}
-{\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+L\+O\+A\+D\+\_\+\+A\+D\+DR~(0x2000\+B418)}
-
-
-
-T\+O\+DO. 
-
-
-
-Definition at line 369 of file B\+C\+M2835.\+h.
-
 \mbox{\Hypertarget{group__Peripherals_ga65e968877416839d0a1f53f2b1fffd25}\label{group__Peripherals_ga65e968877416839d0a1f53f2b1fffd25}} 
-\index{Peripherals@{Peripherals}!A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}}
-\index{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR@{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR}{ARM\_TIMER\_VALUE\_ADDR}}
+\index{Peripherals@{Peripherals}!ARM\_TIMER\_VALUE\_ADDR@{ARM\_TIMER\_VALUE\_ADDR}}
+\index{ARM\_TIMER\_VALUE\_ADDR@{ARM\_TIMER\_VALUE\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{ARM\_TIMER\_VALUE\_ADDR}{ARM\_TIMER\_VALUE\_ADDR}}
 {\footnotesize\ttfamily \#define A\+R\+M\+\_\+\+T\+I\+M\+E\+R\+\_\+\+V\+A\+L\+U\+E\+\_\+\+A\+D\+DR~(0x2000\+B404)}
 
 
@@ -197,12 +199,12 @@ Timer Value Register (Read only) This register holds the current timer value and
 
 
 
-Definition at line 352 of file B\+C\+M2835.\+h.
+Definition at line 355 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga334b052c50be613285e01548f10ea332}\label{group__Peripherals_ga334b052c50be613285e01548f10ea332}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR}{IRQ\_BASIC\_PENDING\_ADDR}}
+\index{Peripherals@{Peripherals}!IRQ\_BASIC\_PENDING\_ADDR@{IRQ\_BASIC\_PENDING\_ADDR}}
+\index{IRQ\_BASIC\_PENDING\_ADDR@{IRQ\_BASIC\_PENDING\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_BASIC\_PENDING\_ADDR}{IRQ\_BASIC\_PENDING\_ADDR}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+A\+D\+DR~(0x2000\+B200)}
 
 
@@ -211,82 +213,82 @@ Pending A\+RM specific I\+R\+Qs status, with additional info.
 
 
 
-Definition at line 393 of file B\+C\+M2835.\+h.
+Definition at line 396 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga733b1f250b79a62906eca0763189fc79}\label{group__Peripherals_ga733b1f250b79a62906eca0763189fc79}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}{IRQ\_DISABLE\_BASIC\_ADDR}}
+\index{Peripherals@{Peripherals}!IRQ\_DISABLE\_BASIC\_ADDR@{IRQ\_DISABLE\_BASIC\_ADDR}}
+\index{IRQ\_DISABLE\_BASIC\_ADDR@{IRQ\_DISABLE\_BASIC\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_DISABLE\_BASIC\_ADDR}{IRQ\_DISABLE\_BASIC\_ADDR}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR~(0x2000\+B224)}
+
+
+
+Definition at line 409 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}\label{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}} 
+\index{Peripherals@{Peripherals}!IRQ\_DISABLE\_IRQ\_1\_ADDR@{IRQ\_DISABLE\_IRQ\_1\_ADDR}}
+\index{IRQ\_DISABLE\_IRQ\_1\_ADDR@{IRQ\_DISABLE\_IRQ\_1\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_DISABLE\_IRQ\_1\_ADDR}{IRQ\_DISABLE\_IRQ\_1\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR~(0x2000\+B21C)}
+
+
+
+Definition at line 407 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}\label{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}} 
+\index{Peripherals@{Peripherals}!IRQ\_DISABLE\_IRQ\_2\_ADDR@{IRQ\_DISABLE\_IRQ\_2\_ADDR}}
+\index{IRQ\_DISABLE\_IRQ\_2\_ADDR@{IRQ\_DISABLE\_IRQ\_2\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_DISABLE\_IRQ\_2\_ADDR}{IRQ\_DISABLE\_IRQ\_2\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR~(0x2000\+B220)}
+
+
+
+Definition at line 408 of file B\+C\+M2835.\+h.
+
+\mbox{\Hypertarget{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}\label{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}} 
+\index{Peripherals@{Peripherals}!IRQ\_ENABLE\_BASIC\_ADDR@{IRQ\_ENABLE\_BASIC\_ADDR}}
+\index{IRQ\_ENABLE\_BASIC\_ADDR@{IRQ\_ENABLE\_BASIC\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_ENABLE\_BASIC\_ADDR}{IRQ\_ENABLE\_BASIC\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR~(0x2000\+B218)}
 
 
 
 Definition at line 406 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}\label{group__Peripherals_gaa557a70338299ab1f8fcd0862bfebcbd}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}{IRQ\_DISABLE\_IRQ\_1\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR~(0x2000\+B21\+C)}
+\mbox{\Hypertarget{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}\label{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}} 
+\index{Peripherals@{Peripherals}!IRQ\_ENABLE\_IRQ\_1\_ADDR@{IRQ\_ENABLE\_IRQ\_1\_ADDR}}
+\index{IRQ\_ENABLE\_IRQ\_1\_ADDR@{IRQ\_ENABLE\_IRQ\_1\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_ENABLE\_IRQ\_1\_ADDR}{IRQ\_ENABLE\_IRQ\_1\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR~(0x2000\+B210)}
 
 
 
 Definition at line 404 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}\label{group__Peripherals_ga22bf9fabec2c703fcce135d5894b79a3}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}{IRQ\_DISABLE\_IRQ\_2\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR~(0x2000\+B220)}
+\mbox{\Hypertarget{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}\label{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}} 
+\index{Peripherals@{Peripherals}!IRQ\_ENABLE\_IRQ\_2\_ADDR@{IRQ\_ENABLE\_IRQ\_2\_ADDR}}
+\index{IRQ\_ENABLE\_IRQ\_2\_ADDR@{IRQ\_ENABLE\_IRQ\_2\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_ENABLE\_IRQ\_2\_ADDR}{IRQ\_ENABLE\_IRQ\_2\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR~(0x2000\+B214)}
 
 
 
 Definition at line 405 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}\label{group__Peripherals_gaaf40e96e6950110bf3b14a8408bcfad6}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR}{IRQ\_ENABLE\_BASIC\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+D\+DR~(0x2000\+B218)}
+\mbox{\Hypertarget{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}\label{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}} 
+\index{Peripherals@{Peripherals}!IRQ\_FIQ\_CONTROL\_ADDR@{IRQ\_FIQ\_CONTROL\_ADDR}}
+\index{IRQ\_FIQ\_CONTROL\_ADDR@{IRQ\_FIQ\_CONTROL\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_FIQ\_CONTROL\_ADDR}{IRQ\_FIQ\_CONTROL\_ADDR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR~(0x2000\+B20C)}
 
 
 
 Definition at line 403 of file B\+C\+M2835.\+h.
 
-\mbox{\Hypertarget{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}\label{group__Peripherals_ga26b03ed5270fb1551038352804cadc9f}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR}{IRQ\_ENABLE\_IRQ\_1\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+1\+\_\+\+A\+D\+DR~(0x2000\+B210)}
-
-
-
-Definition at line 401 of file B\+C\+M2835.\+h.
-
-\mbox{\Hypertarget{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}\label{group__Peripherals_gacc0e8d33bca70be8a8f9e2575fcd9c96}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR}{IRQ\_ENABLE\_IRQ\_2\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+R\+Q\+\_\+2\+\_\+\+A\+D\+DR~(0x2000\+B214)}
-
-
-
-Definition at line 402 of file B\+C\+M2835.\+h.
-
-\mbox{\Hypertarget{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}\label{group__Peripherals_ga2f4ae1371340b17ceff2937ef1ab9ca9}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR}{IRQ\_FIQ\_CONTROL\_ADDR}}
-{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+F\+I\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+A\+D\+DR~(0x2000\+B20\+C)}
-
-
-
-Definition at line 400 of file B\+C\+M2835.\+h.
-
 \mbox{\Hypertarget{group__Peripherals_gaf4fff6d032f44ce818e9bcbb4f82baea}\label{group__Peripherals_gaf4fff6d032f44ce818e9bcbb4f82baea}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR}{IRQ\_PENDING\_1\_ADDR}}
+\index{Peripherals@{Peripherals}!IRQ\_PENDING\_1\_ADDR@{IRQ\_PENDING\_1\_ADDR}}
+\index{IRQ\_PENDING\_1\_ADDR@{IRQ\_PENDING\_1\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_PENDING\_1\_ADDR}{IRQ\_PENDING\_1\_ADDR}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+A\+D\+DR~(0x2000\+B204)}
 
 
@@ -295,32 +297,32 @@ Pending shared I\+R\+Qs status 1.
 
 
 
-Definition at line 396 of file B\+C\+M2835.\+h.
+Definition at line 399 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga536add31e36eeec9bbb6506f798d9761}\label{group__Peripherals_ga536add31e36eeec9bbb6506f798d9761}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}}
-\index{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK}{IRQ\_PENDING\_1\_C1\_MASK}}
+\index{Peripherals@{Peripherals}!IRQ\_PENDING\_1\_C1\_MASK@{IRQ\_PENDING\_1\_C1\_MASK}}
+\index{IRQ\_PENDING\_1\_C1\_MASK@{IRQ\_PENDING\_1\_C1\_MASK}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_PENDING\_1\_C1\_MASK}{IRQ\_PENDING\_1\_C1\_MASK}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C1\+\_\+\+M\+A\+SK~(1 $<$$<$ 1)}
 
 
 
-Definition at line 414 of file B\+C\+M2835.\+h.
+Definition at line 417 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga0ad6222d2e26c8a0a0353842875077d7}\label{group__Peripherals_ga0ad6222d2e26c8a0a0353842875077d7}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}}
-\index{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK}{IRQ\_PENDING\_1\_C3\_MASK}}
+\index{Peripherals@{Peripherals}!IRQ\_PENDING\_1\_C3\_MASK@{IRQ\_PENDING\_1\_C3\_MASK}}
+\index{IRQ\_PENDING\_1\_C3\_MASK@{IRQ\_PENDING\_1\_C3\_MASK}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_PENDING\_1\_C3\_MASK}{IRQ\_PENDING\_1\_C3\_MASK}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+1\+\_\+\+C3\+\_\+\+M\+A\+SK~(1 $<$$<$ 3)}
 
 
 
-Definition at line 415 of file B\+C\+M2835.\+h.
+Definition at line 418 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga9633641d3c1c1f3c450c35cbe28f0df9}\label{group__Peripherals_ga9633641d3c1c1f3c450c35cbe28f0df9}} 
-\index{Peripherals@{Peripherals}!I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}}
-\index{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR@{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR}{IRQ\_PENDING\_2\_ADDR}}
+\index{Peripherals@{Peripherals}!IRQ\_PENDING\_2\_ADDR@{IRQ\_PENDING\_2\_ADDR}}
+\index{IRQ\_PENDING\_2\_ADDR@{IRQ\_PENDING\_2\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{IRQ\_PENDING\_2\_ADDR}{IRQ\_PENDING\_2\_ADDR}}
 {\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+2\+\_\+\+A\+D\+DR~(0x2000\+B208)}
 
 
@@ -329,12 +331,12 @@ Pending shared I\+R\+Qs status 2.
 
 
 
-Definition at line 399 of file B\+C\+M2835.\+h.
+Definition at line 402 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_gac7a1d4c43a8ef81fe4f18a6c49541657}\label{group__Peripherals_gac7a1d4c43a8ef81fe4f18a6c49541657}} 
-\index{Peripherals@{Peripherals}!P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR@{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}}
-\index{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR@{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR}{PERIPHERAL\_BASE\_ADDR}}
+\index{Peripherals@{Peripherals}!PERIPHERAL\_BASE\_ADDR@{PERIPHERAL\_BASE\_ADDR}}
+\index{PERIPHERAL\_BASE\_ADDR@{PERIPHERAL\_BASE\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{PERIPHERAL\_BASE\_ADDR}{PERIPHERAL\_BASE\_ADDR}}
 {\footnotesize\ttfamily \#define P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+DR~(0x20000000)}
 
 
@@ -346,10 +348,10 @@ The start of physical peripheral memory.
 Definition at line 90 of file B\+C\+M2835.\+h.
 
 \mbox{\Hypertarget{group__Peripherals_ga49adb525268a836f74bd190622fa100c}\label{group__Peripherals_ga49adb525268a836f74bd190622fa100c}} 
-\index{Peripherals@{Peripherals}!P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR@{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}}
-\index{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR@{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR}{PERIPHERAL\_MAX\_ADDR}}
-{\footnotesize\ttfamily \#define P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR~(0x20\+F\+F\+F\+F\+F\+F)}
+\index{Peripherals@{Peripherals}!PERIPHERAL\_MAX\_ADDR@{PERIPHERAL\_MAX\_ADDR}}
+\index{PERIPHERAL\_MAX\_ADDR@{PERIPHERAL\_MAX\_ADDR}!Peripherals@{Peripherals}}
+\doxysubsubsection{\texorpdfstring{PERIPHERAL\_MAX\_ADDR}{PERIPHERAL\_MAX\_ADDR}}
+{\footnotesize\ttfamily \#define P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+M\+A\+X\+\_\+\+A\+D\+DR~(0x20\+F\+F\+F\+F\+FF)}
 
 
 
@@ -364,11 +366,11 @@ Definition at line 93 of file B\+C\+M2835.\+h.
 
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{group__Peripherals_ga5e0e58b5a11a26c6eb46b74716e8801b}\label{group__Peripherals_ga5e0e58b5a11a26c6eb46b74716e8801b}} 
 \index{Peripherals@{Peripherals}!dmb@{dmb}}
 \index{dmb@{dmb}!Peripherals@{Peripherals}}
-\subsubsection{\texorpdfstring{dmb()}{dmb()}}
+\doxysubsubsection{\texorpdfstring{dmb()}{dmb()}}
 {\footnotesize\ttfamily void dmb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 

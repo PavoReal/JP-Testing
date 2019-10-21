@@ -1,16 +1,9 @@
 #include "GPIO.h"
 #include "UART.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 #define UNUSED(a) (void) a
-
-void
-exit(u32 code)
-{
-    UNUSED(code);
-
-    for(;;) { nop(); }
-}
 
 u64
 GetSystemTimer(void)
@@ -48,10 +41,7 @@ DelayS(u32 sec)
     u64 target = (sec * SYSTIMER_FREQ) + GetSystemTimer();
 
     while (target > GetSystemTimer())
-    {
-        // To nop or not to nop?
-        nop();
-    }
+    {}
 }
 
 void 
@@ -73,26 +63,28 @@ SetupUART(void)
     SetGPIOMode(GPIO_14, GPIO_ALT5);
 }
 
-void 
+void
+StartUART(void)
+{   
+    dmb();
+    *AUX_MU_CNTL = 2;
+}
+
+int 
 main(void)
 {
     SetupUART();
+    StartUART();
 
-    dmb();
-    SetGPIOMode(GPIO_LED, GPIO_OUTPUT);
-    
-    dmb();
-    *AUX_MU_CNTL = 2;
-
-    float number = 0;
+    u32 number = 0;
     char buffer[512];
     while (1)
     {
-        sprintf(buffer, "This shit takes forever #%f", number);
-        number += 0.1f;
+        sprintf(buffer, "This shit takes forever #%lu", number++);
         UART_Puts(buffer);
+
         DelayS(1);
     }
 
-    exit(0);
+    return EXIT_SUCCESS;
 }

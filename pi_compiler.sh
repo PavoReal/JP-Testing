@@ -51,7 +51,7 @@ then
 
 	mkdir build
 	pushd build
-		../configure --target=$TARGET --prefix=$PREFIX --with-float=hard --enable-newlib-io-long-long
+		../configure --target=$TARGET --prefix=$PREFIX --disable-newlib-supplied-syscalls --enable-newlib-io-long-long
 		make all -j $JOBS
 		sudo make install
 	popd

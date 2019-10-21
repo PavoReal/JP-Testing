@@ -2,9 +2,9 @@ var indexSectionsWithContent =
 {
   0: "_abcdegimnpsu",
   1: "bgmu",
-  2: "cdemns",
+  2: "cdegmnsu",
   3: "su",
-  4: "gu",
+  4: "bgu",
   5: "acgipsu"
 };
 

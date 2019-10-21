@@ -1,51 +1,101 @@
-\hypertarget{main_8c}{}\section{src/main.c File Reference}
-\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+\hypertarget{main_8c}{}\doxysection{src/main.c File Reference}
+\label{main_8c}\index{src/main.c@{src/main.c}}
 {\ttfamily \#include \char`\"{}G\+P\+I\+O.\+h\char`\"{}}\newline
-\subsection*{Macros}
+{\ttfamily \#include \char`\"{}U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{main_8c_aa2c1c2787f4fc780b0a902fc66d5c3ce}{U\+N\+U\+S\+ED}(a)~(void) a
+\#define \mbox{\hyperlink{main_8c_aa2c1c2787f4fc780b0a902fc66d5c3ce}{U\+N\+U\+S\+ED}}(a)~(void) a
 \end{DoxyCompactItemize}
-\subsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{main_8c_a0dd6a496a668e9cec6bdb47f1a74c071}{exit} (\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32} code)
+void \mbox{\hyperlink{main_8c_a0dd6a496a668e9cec6bdb47f1a74c071}{exit}} (\mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}} code)
 \item 
-void \hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\mbox{\hyperlink{group__Common_ga3f7e2bcbb0b4c338f3c4f6c937cd4234}{u64}} \mbox{\hyperlink{main_8c_a43e3813d957c300be6a410a5285c4561}{Get\+System\+Timer}} (void)
+\item 
+\mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}} \mbox{\hyperlink{main_8c_ad523571e718fc9b111d25df748a65be0}{Get\+System\+Timer32}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a9a5dd2bc1401fb57a40d25216d847fba}{DelayS}} (\mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}} sec)
+\item 
+void \mbox{\hyperlink{main_8c_aeb951e7840f1b39a2266ff48155bb522}{Setup\+U\+A\+RT}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
 \end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
+\doxysubsection{Macro Definition Documentation}
 \mbox{\Hypertarget{main_8c_aa2c1c2787f4fc780b0a902fc66d5c3ce}\label{main_8c_aa2c1c2787f4fc780b0a902fc66d5c3ce}} 
-\index{main.\+c@{main.\+c}!U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}}
-\index{U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}!main.\+c@{main.\+c}}
-\subsubsection{\texorpdfstring{U\+N\+U\+S\+ED}{UNUSED}}
+\index{main.c@{main.c}!UNUSED@{UNUSED}}
+\index{UNUSED@{UNUSED}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{UNUSED}{UNUSED}}
 {\footnotesize\ttfamily \#define U\+N\+U\+S\+ED(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~(void) a}
 
 
 
-Definition at line 3 of file main.\+c.
+Definition at line 5 of file main.\+c.
 
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a9a5dd2bc1401fb57a40d25216d847fba}\label{main_8c_a9a5dd2bc1401fb57a40d25216d847fba}} 
+\index{main.c@{main.c}!DelayS@{DelayS}}
+\index{DelayS@{DelayS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DelayS()}{DelayS()}}
+{\footnotesize\ttfamily void DelayS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}}}]{sec }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file main.\+c.
+
 \mbox{\Hypertarget{main_8c_a0dd6a496a668e9cec6bdb47f1a74c071}\label{main_8c_a0dd6a496a668e9cec6bdb47f1a74c071}} 
-\index{main.\+c@{main.\+c}!exit@{exit}}
-\index{exit@{exit}!main.\+c@{main.\+c}}
-\subsubsection{\texorpdfstring{exit()}{exit()}}
-{\footnotesize\ttfamily void exit (\begin{DoxyParamCaption}\item[{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}}]{code }\end{DoxyParamCaption})}
+\index{main.c@{main.c}!exit@{exit}}
+\index{exit@{exit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}}}]{code }\end{DoxyParamCaption})}
 
 
 
-Definition at line 6 of file main.\+c.
+Definition at line 8 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_a43e3813d957c300be6a410a5285c4561}\label{main_8c_a43e3813d957c300be6a410a5285c4561}} 
+\index{main.c@{main.c}!GetSystemTimer@{GetSystemTimer}}
+\index{GetSystemTimer@{GetSystemTimer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{GetSystemTimer()}{GetSystemTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__Common_ga3f7e2bcbb0b4c338f3c4f6c937cd4234}{u64}} Get\+System\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_ad523571e718fc9b111d25df748a65be0}\label{main_8c_ad523571e718fc9b111d25df748a65be0}} 
+\index{main.c@{main.c}!GetSystemTimer32@{GetSystemTimer32}}
+\index{GetSystemTimer32@{GetSystemTimer32}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{GetSystemTimer32()}{GetSystemTimer32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__Common_gafaa62991928fb9fb18ff0db62a040aba}{u32}} Get\+System\+Timer32 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file main.\+c.
 
 \mbox{\Hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}} 
-\index{main.\+c@{main.\+c}!main@{main}}
-\index{main@{main}!main.\+c@{main.\+c}}
-\subsubsection{\texorpdfstring{main()}{main()}}
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily void main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 14 of file main.\+c.
+Definition at line 77 of file main.\+c.
+
+\mbox{\Hypertarget{main_8c_aeb951e7840f1b39a2266ff48155bb522}\label{main_8c_aeb951e7840f1b39a2266ff48155bb522}} 
+\index{main.c@{main.c}!SetupUART@{SetupUART}}
+\index{SetupUART@{SetupUART}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SetupUART()}{SetupUART()}}
+{\footnotesize\ttfamily void Setup\+U\+A\+RT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file main.\+c.
 

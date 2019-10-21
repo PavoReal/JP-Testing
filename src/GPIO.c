@@ -3,6 +3,8 @@
 void
 SetGPIOMode(u32 pin, u32 mode)
 {
+    dmb();
+
     if (pin <= 9)
     {
         // GPFSEL0
@@ -77,6 +79,8 @@ SetGPIOMode(u32 pin, u32 mode)
 void
 SetGPIO(u32 pin)
 {
+    dmb();
+
     if (pin <= 31)
     {
         *GPSET0 = (1 << pin);
@@ -91,6 +95,8 @@ SetGPIO(u32 pin)
 void
 ClearGPIO(u32 pin)
 {
+    dmb();
+    
     if (pin <= 31)
     {
         *GPCLR0 = (1 << pin);

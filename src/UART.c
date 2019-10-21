@@ -3,6 +3,8 @@
 void
 UART_PutC(char c)
 {
+	dmb();
+	
 	while (1)
     {
     	if (*AUX_MU_LSR & _AUX_MU_LSR_TRANS_EMPTY_MASK)

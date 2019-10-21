@@ -1,5 +1,6 @@
 var group__UART =
 [
+    [ "_AUX_MU_LSR_TRANS_EMPTY_MASK", "group__UART.html#ga6f6edde868a1d549c62943049dca35b8", null ],
     [ "AUX_MU_BAUD_ADDR", "group__UART.html#ga8430fd87ed60df61a2cf173f54c15549", null ],
     [ "AUX_MU_CNTL_ADDR", "group__UART.html#ga9c3d11375873d03e2bb8b93d3ae970fb", null ],
     [ "AUX_MU_IER_ADDR", "group__UART.html#gab7f0b281001eba1983b44e5bd3de3624", null ],

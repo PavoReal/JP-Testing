@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['peripherals',['Peripherals',['../group__Peripherals.html',1,'']]]
+  ['peripherals_274',['Peripherals',['../group__Peripherals.html',1,'']]]
 ];
