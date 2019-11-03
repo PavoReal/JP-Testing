@@ -71,13 +71,20 @@ StartUART(void)
 }
 
 int 
-main(void)
+start(void)
 {
     SetupUART();
     StartUART();
 
     u32 number = 0;
     char buffer[512];
+
+    char *test = (char*) malloc(512);
+
+    sprintf(buffer, "test loc: 0x%p\n%.*s", test, 512, test);
+    UART_Puts(buffer);
+    DelayS(10);
+
     while (1)
     {
         sprintf(buffer, "This shit takes forever #%lu", number++);
