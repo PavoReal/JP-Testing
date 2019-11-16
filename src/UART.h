@@ -14,4 +14,13 @@ UART_Puts(char *str);
 extern void
 UART_PutB(char *str, u32 size);
 
+extern void
+UART_Printf(const char *fmt, ...);
+
+extern char
+UART_GetC(void);
+
+extern u32
+UART_GetS(char *str);
+
 #endif

@@ -61,13 +61,14 @@ SetupUART(void)
     dmb();
 
     SetGPIOMode(GPIO_14, GPIO_ALT5);
+    SetGPIOMode(GPIO_15, GPIO_ALT5);
 }
 
 void
 StartUART(void)
 {   
     dmb();
-    *AUX_MU_CNTL = 2;
+    *AUX_MU_CNTL = 3;
 }
 
 int 
@@ -76,21 +77,18 @@ start(void)
     SetupUART();
     StartUART();
 
-    u32 number = 0;
-    char buffer[512];
-
-    char *test = (char*) malloc(512);
-
-    sprintf(buffer, "test loc: 0x%p\n%.*s", test, 512, test);
-    UART_Puts(buffer);
-    DelayS(10);
+    UART_Puts("Hello JP!");
+    char c = UART_GetC();
+    
+    UART_PutC(c);
+    UART_Puts("");
 
     while (1)
     {
-        sprintf(buffer, "This shit takes forever #%lu", number++);
-        UART_Puts(buffer);
+        char buffer[1024];
+        UART_GetS(buffer);
 
-        DelayS(1);
+        UART_Puts(buffer);
     }
 
     return EXIT_SUCCESS;
