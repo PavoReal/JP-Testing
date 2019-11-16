@@ -1,5 +1,10 @@
 #! /bin/bash
 
+if ! [ -x "$(command -v arm-none-eabi-gcc)" ]; then
+	export PATH="$PATH:/opt/cross-compiler/bin"
+	echo "Trying /opt/cross-compiler/bin"
+fi
+
 CC=arm-none-eabi-gcc
 LD=arm-none-eabi-ld
 AS=arm-none-eabi-as
