@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# This is for the jenkins build
 if ! [ -x "$(command -v arm-none-eabi-gcc)" ]; then
 	export PATH="$PATH:/opt/cross-compiler/bin"
 	echo "Trying to use /opt/cross-compiler/bin"
