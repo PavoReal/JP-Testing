@@ -5,7 +5,7 @@
 .globl _start
 _start:
 .func _start
-    mov sp,#0x8000
+    mov sp, #0x80000
     bl start
 
 hang: b hang
