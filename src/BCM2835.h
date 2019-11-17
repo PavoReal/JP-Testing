@@ -156,6 +156,8 @@ static volatile u8 * const AUX_ENABLES = (u8*) AUX_ENABLES_ADDR;
 
 #define _AUX_ME_LSR_DATA_READY_MASK (0x1)
 
+#define _AUX_ME_LSR_TRANS_IDLE_MASK (0x40)
+
 static volatile u8 * const AUX_MU_IO       = (u8*) AUX_MU_IO_REG_ADDR;
 static volatile u8 * const AUX_MU_IER      = (u8*) AUX_MU_IER_ADDR;
 static volatile u8 * const AUX_MU_IIR      = (u8*) AUX_MU_IIR_ADDR;

@@ -26,8 +26,8 @@ UART_Puts(char *str)
 	{
 		UART_PutC(*str++);
 	}
-	UART_PutC('\r');
-	UART_PutC('\n');
+
+	UART_PutNewline();
 }
 
 void
@@ -71,16 +71,35 @@ UART_GetS(char *str)
 	u32 count = 1;
 	char c;
 
-	do
+	bool done = false;
+
+	while (!done)
 	{
 		c = UART_GetC();
-		UART_PutC(c);
 
-		*str++ = c;
-		++count;
-	} while (((c != '\n') || (c != '\0')));
+		if (c != '\r')
+		{
+			*str++ = c;
+			++count;
+			UART_PutC(c);
+		}
+		else
+		{
+			done = true;
+			UART_PutNewline();
+		}
+	}
 
 	*str = '\0';
 
 	return count;
+}
+
+void
+UART_Flush(void)
+{
+	while(!(*AUX_MU_LSR & _AUX_ME_LSR_TRANS_IDLE_MASK))
+	{
+		nop();
+	}
 }

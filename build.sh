@@ -14,7 +14,7 @@ OBJCOPY=arm-none-eabi-objcopy
 
 ASM_FLAGS="--warn --fatal-warnings -mcpu=arm1176jzf-s -mfpu=vfpv2"
 CC_FLAGS="-Wall -Wextra -Werror -O2 -nostartfiles -ffreestanding -mcpu=arm1176jzf-s -mtune=arm1176jzf-s  -I../newlib/libc/include"
-LD_FLAGS="-lc -lm -T memmap"
+LD_FLAGS="-lc -lm"
 
 shopt -s nullglob
 

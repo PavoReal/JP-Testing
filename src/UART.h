@@ -5,6 +5,8 @@
 
 #define BAUD_DIV_9600 (3254)
 
+#define UART_PutNewline() UART_PutC('\r'); UART_PutC('\n')
+
 extern void
 UART_PutC(char c);
 
@@ -22,5 +24,8 @@ UART_GetC(void);
 
 extern u32
 UART_GetS(char *str);
+
+extern void
+UART_Flush(void);
 
 #endif

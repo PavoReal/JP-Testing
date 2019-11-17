@@ -1,9 +1,7 @@
-#include "GPIO.h"
-#include "UART.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-#define UNUSED(a) (void) a
+#include "Platform.h"
 
 u64
 GetSystemTimer(void)
@@ -69,6 +67,8 @@ StartUART(void)
 {   
     dmb();
     *AUX_MU_CNTL = 3;
+
+    UART_Flush();
 }
 
 int 
@@ -77,18 +77,13 @@ start(void)
     SetupUART();
     StartUART();
 
-    UART_Puts("Hello JP!");
-    char c = UART_GetC();
-    
-    UART_PutC(c);
-    UART_Puts("");
+    UART_Printf("Hello JP, Version %s\r\n", JP_VERSION);
 
     while (1)
     {
         char buffer[1024];
         UART_GetS(buffer);
-
-        UART_Puts(buffer);
+        UART_Printf("> %s\r\n", buffer);
     }
 
     return EXIT_SUCCESS;
