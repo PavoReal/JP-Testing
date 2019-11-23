@@ -77,7 +77,9 @@ start(void)
     SetupUART();
     StartUART();
 
-    UART_Printf("Hello JP, Version %s\r\n", JP_VERSION);
+    void *m = malloc(1024);
+
+    UART_Printf("Hello JP, Version %s\r\n%p", JP_VERSION, m);
 
     while (1)
     {
