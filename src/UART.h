@@ -11,6 +11,9 @@ extern void
 UART_PutC(char c);
 
 extern void
+UART_PutHex(u32 data);
+
+extern void
 UART_Puts(char *str);
 
 extern void

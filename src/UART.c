@@ -20,6 +20,12 @@ UART_PutC(char c)
 }
 
 void
+UART_PutError(u32 data)
+{
+	UART_Printf("[FATAL] %0x", data);
+}
+
+void
 UART_Puts(char *str)
 {
 	while (*str)
